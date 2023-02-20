@@ -9550,7 +9550,7 @@ export const ThreeData = {
                     name:"plant-right",
                     objHandle: [{ direction: 'arb', handleScale: [100,100,100]}],
                     uuid:"",
-                    x: 1585,
+                    x: 2040,
                     y: 0,
                     z: 200,
                 },
@@ -9558,7 +9558,7 @@ export const ThreeData = {
                     name:"plant-right",
                     objHandle: [{ direction: 'arb', handleScale: [100,100,100]}],
                     uuid:"",
-                    x: 1585,
+                    x: 2040,
                     y: 0,
                     z: 350,
                 },
@@ -9730,7 +9730,6 @@ export const ThreeData = {
                     y: 0,
                     z: 150,
                 },
-
                 {
                     name:"plant-right",
                     objHandle: [{ direction: 'y',degree:-0.5*Math.PI},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
@@ -9763,6 +9762,178 @@ export const ThreeData = {
                     x: 1585,
                     y: 0,
                     z: 400,
+                },
+
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:Math.PI}, { direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 2040,
+                    y: 0,
+                    z: 100,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:Math.PI}, { direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 2040,
+                    y: 0,
+                    z: 250,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:Math.PI}, { direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 2040,
+                    y: 0,
+                    z: 400,
+                },
+                // 会议室
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:Math.PI}, { direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 1300,
+                    y: 0,
+                    z: 1180,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:Math.PI}, { direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 1300,
+                    y: 0,
+                    z: 1180,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:Math.PI}, { direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 1300,
+                    y: 0,
+                    z: 1180,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:Math.PI}, { direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 1220,
+                    y: 0,
+                    z: 1180,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:Math.PI}, { direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 1140,
+                    y: 0,
+                    z: 1180,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:Math.PI}, { direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 1060,
+                    y: 0,
+                    z: 1180,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:Math.PI}, { direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 980,
+                    y: 0,
+                    z: 1180,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:Math.PI}, { direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 900,
+                    y: 0,
+                    z: 1180,
+                },
+
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 1300,
+                    y: 0,
+                    z: 920,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 1300,
+                    y: 0,
+                    z: 920,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 1300,
+                    y: 0,
+                    z: 920,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 1220,
+                    y: 0,
+                    z: 920
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 1140,
+                    y: 0,
+                    z: 920
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 1060,
+                    y: 0,
+                    z: 920
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 980,
+                    y: 0,
+                    z: 920
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 900,
+                    y: 0,
+                    z: 920
+                },
+
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:-Math.PI/2},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 1400,
+                    y: 0,
+                    z: 1050
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:Math.PI/2},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 800,
+                    y: 0,
+                    z: 1050
                 },
 
             ]
@@ -9878,6 +10049,63 @@ export const ThreeData = {
                         "repeaty": true,
                         "width": 128,
                         "height": 128
+                    }
+                },
+            }
+        },
+        {
+            "show": true,
+            "uuid": "",
+            "name": "会议桌",
+            "objType": "cube",
+            "width": 500,
+            "depth": 200,
+            "height": 10,
+            "x": 1105,
+            "y": 60,
+            "z": 1050,
+            "style": {
+                "skinColor": 16448250,
+                "skin": {
+                    "skin_behind": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
+                    },
+                    "skin_fore": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
+                    },
+                    "skin_left": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
+                    },
+                    "skin_right": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
+                    },
+                    "skin_up": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
                     }
                 },
             }
