@@ -4109,6 +4109,296 @@ export const ThreeData = {
                         },
                     ]
                 },
+                // 茶室门厅下墙
+                {
+                    "uuid": "",
+                    "name": "wall1",
+                    "skin": {
+                        "skin_behind": {
+                            "skinColor": 16777215,
+                            "imgUrl": "wall2.png",
+                            "repeatx": true,
+                            "repeaty": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        "skin_fore": {
+                            "skinColor": 16777215,
+                            "imgUrl": "wall2.png",
+                            "repeatx": true,
+                            "repeaty": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        "skin_left": {
+                            "skinColor": 16777215,
+                            "imgUrl": "wall2.png",
+                            "repeatx": true,
+                            "repeaty": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        "skin_right": {
+                            "skinColor": 16777215,
+                            "imgUrl": "wall2.png",
+                            "repeatx": true,
+                            "repeaty": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        "skin_up": {
+                            "skinColor": 16777215,
+                            "imgUrl": "wall2.png",
+                            "repeatx": true,
+                            "repeaty": true,
+                            "width": 128,
+                            "height": 128
+                        }
+                    },
+                    "startDot": {
+                        "x": 390,
+                        "y": 120,
+                        "z": 490
+                    },
+                    "endDot": {
+                        "x": 700,
+                        "y": 120,
+                        "z": 490
+                    },
+                    childrens: [
+                        {
+                            op: '-',
+                            show: true,
+                            uuid: "",
+                            name: 'doorhole',
+                            objType: 'doorhole',
+                            depth: 30,
+                            height: 220,
+                            startDot: {
+                                x: 600,
+                                y: 110,
+                                z: 490
+                            },
+                            endDot: {
+                                x: 490,
+                                y: 110,
+                                z: 490
+                            },
+                        },
+                        {
+                            show: true,
+                            uuid: "",
+                            name: 'doorCaseRight',
+                            objType: 'cube',
+                            "skin": {
+                                "skin_behind": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_fore": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_left": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_right": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_up": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                }
+                            },
+                            depth: 24,
+                            height: 220,
+                            startDot: {
+                                x: 600,
+                                y: 110,
+                                z: 490
+                            },
+                            endDot: {
+                                x: 595,
+                                y: 110,
+                                z: 490
+                            },
+                            skinColor:0xc0dee0,
+                        },
+                        {
+                            show: true,
+                            name: 'doorCaseLeft',
+                            uuid: "",
+                            objType: 'cube',
+                            "skin": {
+                                "skin_behind": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_fore": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_left": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_right": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_up": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                }
+                            },
+                            depth: 24,
+                            height: 220,
+                            startDot: {
+                                x: 490,
+                                y: 110,
+                                z: 490
+                            },
+                            endDot: {
+                                x: 495,
+                                y: 110,
+                                z: 490
+                            },
+                            skinColor:0xc0dee0,
+                        },
+                        {
+                            show: true,
+                            name: 'doorCaseTop',
+                            uuid: "",
+                            objType: 'cube',
+                            "skin": {
+                                "skin_behind": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_fore": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_left": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_right": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_up": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                }
+                            },
+                            depth: 24,
+                            height: 5,
+                            startDot: {
+                                x: 600,
+                                y: 220,
+                                z: 490
+                            },
+                            endDot: {
+                                x: 490,
+                                y: 220,
+                                z: 490
+                            },
+                            skinColor:0xc0dee0,
+                        },
+                        {
+                            show: true,
+                            name: 'doorLeft',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 4,
+                            height: 210,
+                            skinColor: 0x51443e,
+                            skin: {
+                                skin_behind: {
+                                    imgUrl: "door_wood_right.png",
+                                    transparent: true,
+                                },
+                                skin_fore: {
+                                    imgUrl: "door_wood_left.png",
+                                    transparent: true,
+                                },
+                            },
+                            startDot: {
+                                x: 595,
+                                y: 112,
+                                z: 490
+                            },
+                            endDot: {
+                                x: 495,
+                                y: 112,
+                                z: 490
+                            },
+                        },
+                    ]
+                },
                 // 茶室左墙
                 {
                     "uuid": "",
@@ -7444,7 +7734,270 @@ export const ThreeData = {
                         "x": -1870,
                         "y": 120,
                         "z": 200
-                    }
+                    },
+                    childrens: [
+                        {
+                            op: '-',
+                            show: true,
+                            uuid: "",
+                            name: 'doorhole',
+                            objType: 'doorhole',
+                            depth: 40,
+                            height: 220,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI/40
+                                }
+                            ],
+                            startDot: {
+                                x: -1875,
+                                y: 110,
+                                z: 410-300
+                            },
+                            endDot: {
+                                x: -1875,
+                                y: 110,
+                                z: 300-300
+                            },
+                        },
+                        {
+                            show: true,
+                            uuid: "",
+                            name: 'doorCaseRight',
+                            objType: 'cube',
+                            "skin": {
+                                "skin_behind": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_fore": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_left": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_right": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_up": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                }
+                            },
+                            depth: 24,
+                            height: 220,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI/40
+                                }
+                            ],
+                            startDot: {
+                                x: -1865,
+                                y: 110,
+                                z: 380-270
+                            },
+                            endDot: {
+                                x: -1865,
+                                y: 110,
+                                z: 375-270
+                            },
+                            skinColor:0xc0dee0,
+                        },
+                        {
+                            show: true,
+                            name: 'doorCaseLeft',
+                            uuid: "",
+                            objType: 'cube',
+                            "skin": {
+                                "skin_behind": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_fore": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_left": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_right": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_up": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                }
+                            },
+                            depth: 24,
+                            height: 220,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI/40
+                                }
+                            ],
+                            startDot: {
+                                x: -1875,
+                                y: 110,
+                                z: 330-330
+                            },
+                            endDot: {
+                                x: -1875,
+                                y: 110,
+                                z: 335-330
+                            },
+                            skinColor:0xc0dee0,
+                        },
+                        {
+                            show: true,
+                            name: 'doorCaseTop',
+                            uuid: "",
+                            objType: 'cube',
+                            "skin": {
+                                "skin_behind": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_fore": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_left": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_right": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_up": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                }
+                            },
+                            depth: 24,
+                            height: 5,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI/40
+                                }
+                            ],
+                            startDot: {
+                                x: -1875,
+                                y: 220,
+                                z: 410-300
+                            },
+                            endDot: {
+                                x: -1875,
+                                y: 220,
+                                z: 300-300
+                            },
+                            skinColor:0xc0dee0,
+                        },
+                        {
+                            show: true,
+                            name: 'doorLeft',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 4,
+                            height: 210,
+                            skinColor: 0x51443e,
+                            skin: {
+                                skin_right: {
+                                    imgUrl: "door_wood_right.png",
+                                    transparent: true,
+                                },
+                                skin_left: {
+                                    imgUrl: "door_wood_left.png",
+                                    transparent: true,
+                                },
+                            },
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI/40
+                                }
+                            ],
+                            startDot: {
+                                x: -1875,
+                                y: 112,
+                                z: 405-300
+                            },
+                            endDot: {
+                                x: -1875,
+                                y: 112,
+                                z: 305-300
+                            },
+                        },
+                    ]
                 },
                 // 左会议室右
                 {
@@ -7698,267 +8251,267 @@ export const ThreeData = {
                         "z": 1120
                     },
                     childrens: [
-                        // {
-                        //     op: '-',
-                        //     show: true,
-                        //     uuid: "",
-                        //     name: 'doorhole',
-                        //     objType: 'doorhole',
-                        //     depth: 30,
-                        //     height: 220,
-                        //     "rotation": [
-                        //         {
-                        //             "direction": "y",
-                        //             "degree": Math.PI* 14/40
-                        //         }
-                        //     ],
-                        //     startDot: {
-                        //         x: -905-200,
-                        //         y: 110,
-                        //         z: 410+200
-                        //     },
-                        //     endDot: {
-                        //         x: -905-200,
-                        //         y: 110,
-                        //         z: 300+200
-                        //     },
-                        // },
-                        // {
-                        //     show: true,
-                        //     uuid: "",
-                        //     name: 'doorCaseRight',
-                        //     objType: 'cube',
-                        //     "skin": {
-                        //         "skin_behind": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         },
-                        //         "skin_fore": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         },
-                        //         "skin_left": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         },
-                        //         "skin_right": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         },
-                        //         "skin_up": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         }
-                        //     },
-                        //     depth: 24,
-                        //     height: 220,
-                        //     "rotation": [
-                        //         {
-                        //             "direction": "y",
-                        //             "degree": Math.PI* 14/40
-                        //         }
-                        //     ],
-                        //     startDot: {
-                        //         x: -855-200,
-                        //         y: 110,
-                        //         z: 380+200
-                        //     },
-                        //     endDot: {
-                        //         x: -855-200,
-                        //         y: 110,
-                        //         z: 375+200
-                        //     },
-                        //     skinColor:0xc0dee0,
-                        // },
-                        // {
-                        //     show: true,
-                        //     name: 'doorCaseLeft',
-                        //     uuid: "",
-                        //     objType: 'cube',
-                        //     "skin": {
-                        //         "skin_behind": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         },
-                        //         "skin_fore": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         },
-                        //         "skin_left": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         },
-                        //         "skin_right": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         },
-                        //         "skin_up": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         }
-                        //     },
-                        //     depth: 24,
-                        //     height: 220,
-                        //     "rotation": [
-                        //         {
-                        //             "direction": "y",
-                        //             "degree": Math.PI* 14/40
-                        //         }
-                        //     ],
-                        //     startDot: {
-                        //         x: -955-200,
-                        //         y: 110,
-                        //         z: 330+200
-                        //     },
-                        //     endDot: {
-                        //         x: -955-200,
-                        //         y: 110,
-                        //         z: 335+200
-                        //     },
-                        //     skinColor:0xc0dee0,
-                        // },
-                        // {
-                        //     show: true,
-                        //     name: 'doorCaseTop',
-                        //     uuid: "",
-                        //     objType: 'cube',
-                        //     "skin": {
-                        //         "skin_behind": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         },
-                        //         "skin_fore": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         },
-                        //         "skin_left": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         },
-                        //         "skin_right": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         },
-                        //         "skin_up": {
-                        //             "skinColor": 16777215,
-                        //             "imgUrl": "wood.jpg",
-                        //             "repeatx": true,
-                        //             "repeaty": true,
-                        //             "width": 128,
-                        //             "height": 128
-                        //         }
-                        //     },
-                        //     depth: 24,
-                        //     height: 5,
-                        //     "rotation": [
-                        //         {
-                        //             "direction": "y",
-                        //             "degree": Math.PI* 14/40
-                        //         }
-                        //     ],
-                        //     startDot: {
-                        //         x: -905-200,
-                        //         y: 220,
-                        //         z: 410+200
-                        //     },
-                        //     endDot: {
-                        //         x: -905-200,
-                        //         y: 220,
-                        //         z: 300+200
-                        //     },
-                        //     skinColor:0xc0dee0,
-                        // },
-                        // {
-                        //     show: true,
-                        //     name: 'doorLeft',
-                        //     uuid: "",
-                        //     objType: 'cube',
-                        //     depth: 4,
-                        //     height: 210,
-                        //     skinColor: 0x51443e,
-                        //     skin: {
-                        //         skin_right: {
-                        //             imgUrl: "door_wood_right.png",
-                        //             transparent: true,
-                        //         },
-                        //         skin_left: {
-                        //             imgUrl: "door_wood_left.png",
-                        //             transparent: true,
-                        //         },
-                        //     },
-                        //     "rotation": [
-                        //         {
-                        //             "direction": "y",
-                        //             "degree": Math.PI* 14/40
-                        //         }
-                        //     ],
-                        //     startDot: {
-                        //         x: -905-200,
-                        //         y: 112,
-                        //         z: 405+200
-                        //     },
-                        //     endDot: {
-                        //         x: -905-200,
-                        //         y: 112,
-                        //         z: 305+300
-                        //     },
-                        // },
+                        {
+                            op: '-',
+                            show: true,
+                            uuid: "",
+                            name: 'doorhole',
+                            objType: 'doorhole',
+                            depth: 30,
+                            height: 220,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI* 14/40
+                                }
+                            ],
+                            startDot: {
+                                x: -905-200,
+                                y: 110,
+                                z: 410+315
+                            },
+                            endDot: {
+                                x: -905-200,
+                                y: 110,
+                                z: 300+315
+                            },
+                        },
+                        {
+                            show: true,
+                            uuid: "",
+                            name: 'doorCaseRight',
+                            objType: 'cube',
+                            "skin": {
+                                "skin_behind": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_fore": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_left": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_right": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_up": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                }
+                            },
+                            depth: 24,
+                            height: 220,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI* 14/40
+                                }
+                            ],
+                            startDot: {
+                                x: -855-200,
+                                y: 110,
+                                z: 380+315
+                            },
+                            endDot: {
+                                x: -855-200,
+                                y: 110,
+                                z: 375+315
+                            },
+                            skinColor:0xc0dee0,
+                        },
+                        {
+                            show: true,
+                            name: 'doorCaseLeft',
+                            uuid: "",
+                            objType: 'cube',
+                            "skin": {
+                                "skin_behind": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_fore": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_left": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_right": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_up": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                }
+                            },
+                            depth: 24,
+                            height: 220,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI* 14/40
+                                }
+                            ],
+                            startDot: {
+                                x: -955-200,
+                                y: 110,
+                                z: 330+315
+                            },
+                            endDot: {
+                                x: -955-200,
+                                y: 110,
+                                z: 335+315
+                            },
+                            skinColor:0xc0dee0,
+                        },
+                        {
+                            show: true,
+                            name: 'doorCaseTop',
+                            uuid: "",
+                            objType: 'cube',
+                            "skin": {
+                                "skin_behind": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_fore": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_left": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_right": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_up": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                }
+                            },
+                            depth: 24,
+                            height: 5,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI* 14/40
+                                }
+                            ],
+                            startDot: {
+                                x: -905-200,
+                                y: 220,
+                                z: 410+315
+                            },
+                            endDot: {
+                                x: -905-200,
+                                y: 220,
+                                z: 300+315
+                            },
+                            skinColor:0xc0dee0,
+                        },
+                        {
+                            show: true,
+                            name: 'doorLeft',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 4,
+                            height: 210,
+                            skinColor: 0x51443e,
+                            skin: {
+                                skin_right: {
+                                    imgUrl: "door_wood_right.png",
+                                    transparent: true,
+                                },
+                                skin_left: {
+                                    imgUrl: "door_wood_left.png",
+                                    transparent: true,
+                                },
+                            },
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI* 14/40
+                                }
+                            ],
+                            startDot: {
+                                x: -905-200,
+                                y: 112,
+                                z: 405+315
+                            },
+                            endDot: {
+                                x: -905-200,
+                                y: 112,
+                                z: 305+315
+                            },
+                        },
                     ]
                 },
 
@@ -9004,7 +9557,270 @@ export const ThreeData = {
                         "x": -1830,
                         "y": 120,
                         "z": -450
-                    }
+                    },
+                    childrens: [
+                        {
+                            op: '-',
+                            show: true,
+                            uuid: "",
+                            name: 'doorhole',
+                            objType: 'doorhole',
+                            depth: 30,
+                            height: 220,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI* (1/2 - 1/20)
+                                }
+                            ],
+                            startDot: {
+                                x: -905-660,
+                                y: 110,
+                                z: 410-1100
+                            },
+                            endDot: {
+                                x: -905-660,
+                                y: 110,
+                                z: 300-1100
+                            },
+                        },
+                        {
+                            show: true,
+                            uuid: "",
+                            name: 'doorCaseRight',
+                            objType: 'cube',
+                            "skin": {
+                                "skin_behind": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_fore": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_left": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_right": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_up": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                }
+                            },
+                            depth: 24,
+                            height: 220,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI* (1/2 - 1/20)
+                                }
+                            ],
+                            startDot: {
+                                x: -850-660,
+                                y: 110,
+                                z: 360-1100
+                            },
+                            endDot: {
+                                x: -850-660,
+                                y: 110,
+                                z: 365-1100
+                            },
+                            skinColor:0xc0dee0,
+                        },
+                        {
+                            show: true,
+                            name: 'doorCaseLeft',
+                            uuid: "",
+                            objType: 'cube',
+                            "skin": {
+                                "skin_behind": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_fore": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_left": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_right": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_up": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                }
+                            },
+                            depth: 24,
+                            height: 220,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI* (1/2 - 1/20)
+                                }
+                            ],
+                            startDot: {
+                                x: -960-660,
+                                y: 110,
+                                z: 350-1100
+                            },
+                            endDot: {
+                                x: -960-660,
+                                y: 110,
+                                z: 345-1100
+                            },
+                            skinColor:0xc0dee0,
+                        },
+                        {
+                            show: true,
+                            name: 'doorCaseTop',
+                            uuid: "",
+                            objType: 'cube',
+                            "skin": {
+                                "skin_behind": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_fore": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_left": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_right": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_up": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wood.jpg",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                }
+                            },
+                            depth: 24,
+                            height: 5,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI* (1/2 - 1/20)
+                                }
+                            ],
+                            startDot: {
+                                x: -905-660,
+                                y: 220,
+                                z: 410-1100
+                            },
+                            endDot: {
+                                x: -905-660,
+                                y: 220,
+                                z: 300-1100
+                            },
+                            skinColor:0xc0dee0,
+                        },
+                        {
+                            show: true,
+                            name: 'doorLeft',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 4,
+                            height: 210,
+                            skinColor: 0x51443e,
+                            skin: {
+                                skin_left: {
+                                    imgUrl: "door_wood_right.png",
+                                    transparent: true,
+                                },
+                                skin_right: {
+                                    imgUrl: "door_wood_left.png",
+                                    transparent: true,
+                                },
+                            },
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI* (1/2 - 1/20)
+                                }
+                            ],
+                            startDot: {
+                                x: -905-660,
+                                y: 112,
+                                z: 405-1100
+                            },
+                            endDot: {
+                                x: -905-660,
+                                y: 112,
+                                z: 305-1100
+                            },
+                        },
+                    ]
                 },
                 // 开发上
                 {
@@ -9836,6 +10652,15 @@ export const ThreeData = {
                     y: 0,
                     z: -730,
                 },
+                // 左总经办
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:9*Math.PI/20},{ direction: 'arb', handleScale: [150,150,150]}],
+                    uuid:"",
+                    x: -1800,
+                    y: 0,
+                    z: -1130,
+                },
 
 
 
@@ -10470,7 +11295,6 @@ export const ThreeData = {
                     z: -3,
                 },
 
-
                 {
                     name:"plant-right",
                     objHandle: [{ direction: 'y',degree:-2*Math.PI/3},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
@@ -10503,7 +11327,99 @@ export const ThreeData = {
                     y: 0,
                     z: 40,
                 },
+                // 左销售
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:9*Math.PI/20},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -1900-40,
+                    y: 0,
+                    z: -210,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:9*Math.PI/20},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -2100-40,
+                    y: 0,
+                    z: -230,
+                },
 
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:9*Math.PI/20},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -2100-40,
+                    y: 0,
+                    z: -430,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:9*Math.PI/20},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -2085-40,
+                    y: 0,
+                    z: -530,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:9*Math.PI/20},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -1800-40,
+                    y: 0,
+                    z: -700,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:9*Math.PI/20},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -2000-40,
+                    y: 0,
+                    z: -730,
+                },
+                // 左总经办
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:29*Math.PI/20},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -1750,
+                    y: 0,
+                    z: -1140,
+                },
+                // 会客室
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:Math.PI/3},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -1655+420,
+                    y: 0,
+                    z: 293+670,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:Math.PI/3},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -1605+420,
+                    y: 0,
+                    z: 197+670,
+                },
+
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:-2*Math.PI/3},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -1755+770,
+                    y: 0,
+                    z: 477+620,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:-2*Math.PI/3},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -1705+770,
+                    y: 0,
+                    z: 385+620,
+                },
             ]
         },
 
@@ -10695,6 +11611,66 @@ export const ThreeData = {
             "x": -2120,
             "y": 60,
             "z": 160,
+            "style": {
+                "skinColor": 16448250,
+                "skin": {
+                    "skin_behind": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
+                    },
+                    "skin_fore": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
+                    },
+                    "skin_left": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
+                    },
+                    "skin_right": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
+                    },
+                    "skin_up": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
+                    }
+                },
+            }
+        },
+        {
+            "show": true,
+            "uuid": "",
+            "name": "会议桌",
+            "objType": "cube",
+            "width": 160,
+            "depth": 160,
+            "height": 10,
+            "rotation": [
+                { direction: 'y',degree:Math.PI/3}
+            ],
+            "x": -1070,
+            "y": 60,
+            "z": 980,
             "style": {
                 "skinColor": 16448250,
                 "skin": {
