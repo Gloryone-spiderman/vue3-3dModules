@@ -17,7 +17,9 @@ import {OBJLoader2 } from 'three/examples/jsm/loaders/OBJLoader2'
 import { OBJExporter } from 'three/examples/jsm/exporters/OBJExporter'
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader'
 import TWEEN from '@tweenjs/tween.js'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'   //r100及以上
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import {RectAreaLightUniformsLib} from "three/examples/jsm/lights/RectAreaLightUniformsLib";
+import {RectAreaLightHelper} from "three/examples/jsm/helpers/RectAreaLightHelper";   //r100及以上
 // var OrbitControls = require('three-orbit-controls')(THREE)  //r100 以下
 export default class ThreeMap {
     constructor(props,dataJson) {
@@ -104,8 +106,16 @@ export default class ThreeMap {
         light2.shadow.camera.near =1;
         light2.shadow.camera.far = 5000;
         light2.position.set(0, 350, 0);
-        light2.castShadow = true;//表示这个光是可以产生阴影的
+        light2.castShadow = false;//表示这个光是可以产生阴影的
         this.scene.add(light2);
+        RectAreaLightUniformsLib.init()
+        let light3 = new THREE.RectAreaLight(0x00ff00, 5, 4, 10)
+        light3.position.set(50, 50, -50)
+        light3.lookAt(0, 100, 0)
+        light3.intensity = 100
+        light3.width = 200
+        light3.height = 10
+        this.scene.add(light3)
     }
     //渲染
     render() {
@@ -265,6 +275,9 @@ export default class ThreeMap {
                 case 'sprite':
                     this.createSprite(obj)
                     break
+                case 'switch':
+                    this.createSprite(obj)
+                    break
                 // case 'cylinderPlant':  //自定义花
                 //     tempObj = this.createCylinderPlant(obj)
                 //     this.addObject(tempObj,"scene");
@@ -322,8 +335,8 @@ export default class ThreeMap {
                 }
             }
             var cube = _this.createCube(cubeobj);
-            if (_this.commonFunc.hasObj(wallobj.childrens) && wallobj.childrens.length > 0) {
-                wallobj.childrens.forEach(function(walchildobj, index){
+            if (_this.commonFunc.hasObj(wallobj.children) && wallobj.children.length > 0) {
+                wallobj.children.forEach(function(walchildobj, index){
                     var newobj = _this.CreateHole(walchildobj);
                     cube = _this.mergeModel(walchildobj.op, cube, newobj,commonSkin);
                 })
@@ -837,9 +850,9 @@ export default class ThreeMap {
 
 
         }
-        if (this.commonFunc.hasObj(obj.childrens) && obj.childrens.length > 0) {
+        if (this.commonFunc.hasObj(obj.children) && obj.children.length > 0) {
             let equipmentUUID=[];
-            obj.childrens.forEach(function(service, index){
+            obj.children.forEach(function(service, index){
                 let serviceuuid=service.uuid||_this.commonFunc.guid();
                 service.x=obj.x;
                 service.z=obj.z;
@@ -898,8 +911,8 @@ export default class ThreeMap {
         //创建圆柱体网格模型
         var cylinder = new THREE.Mesh(cylinderGeo, cylinderMat);
         cylinder.position.set(x, y, z);//设置圆柱坐标
-        if (this.commonFunc.hasObj(obj.childrens) && obj.childrens.length > 0) {
-            obj.childrens.forEach(function(childobj, index){
+        if (this.commonFunc.hasObj(obj.children) && obj.children.length > 0) {
+            obj.children.forEach(function(childobj, index){
                 var newobj;
                 if(childobj.objType=="plane"){
                     newobj = _this.createPlaneGeometry(childobj);
@@ -978,7 +991,7 @@ export default class ThreeMap {
             console.log(materials)
             objLoader.setMaterials(materials);
             objLoader.load(_this.commonFunc.getPath('plant/plant.obj'), function(object) {
-                obj.childrens.forEach(function(childobj){
+                obj.children.forEach(function(childobj){
                     var newobj = object.clone();
                     if(!newobj.objHandle){
                         if(childobj.objHandle){
@@ -1005,7 +1018,7 @@ export default class ThreeMap {
             objLoader.setMaterials(materials);
             objLoader.load(_this.commonFunc.getPath('chair/chair.obj'), function(object) {
 
-                obj.childrens.forEach(function(childobj){
+                obj.children.forEach(function(childobj){
                     var newobj = object.clone();
                     if(!newobj.objHandle){
                         if(childobj.objHandle){
@@ -1037,7 +1050,7 @@ export default class ThreeMap {
 
             objLoader.load(_this.commonFunc.getPath('desk/desk.obj'), function(object) {
 
-                obj.childrens.forEach(function(childobj){
+                obj.children.forEach(function(childobj){
                     var newobj = object.clone();
                     if(!newobj.objHandle){
                         if(childobj.objHandle){
@@ -1063,7 +1076,7 @@ export default class ThreeMap {
             var objLoader = new OBJLoader();
             objLoader.setMaterials(materials);
             objLoader.load(_this.commonFunc.getPath('annihilator/annihilator.obj'), function(object) {
-                obj.childrens.forEach(function(childobj){
+                obj.children.forEach(function(childobj){
                     var newobj = object.clone();
                     if(!newobj.objHandle){
                         if(childobj.objHandle){
@@ -1089,7 +1102,7 @@ export default class ThreeMap {
             var objLoader = new OBJLoader();
             objLoader.setMaterials(materials);
             objLoader.load(_this.commonFunc.getPath('camera/camera.obj'), function(object) {
-                obj.childrens.forEach(function(childobj){
+                obj.children.forEach(function(childobj){
                     var newobj = object.clone();
                     if(!newobj.objHandle){
                         if(childobj.objHandle){
@@ -1868,6 +1881,19 @@ export default class ThreeMap {
     }
 
     createSprite(obj) {
+        let sprite = this.makeTextSprite(' 温度：' + 12 + '℃ 湿度：' + 12% + ' ')
+        sprite.position.set(obj.x + 50,obj.y+24,obj.z-20);
+        sprite.scale.set(300, 100,1); // 控制精灵大小，比如可视化中精灵大小表征数据大小 只需要设置x、y两个分量就可以
+        sprite.data=obj.data; //告警等级默认给1，给最低告警
+        sprite.name="spriteAlarm";
+        sprite.visible=true;
+        console.log(sprite)
+        this.addObject(sprite);
+        this.sprite.push(sprite);
+    }
+
+
+    createSwitch(obj) {
         let sprite = this.makeTextSprite(' 温度：' + 12 + '℃ 湿度：' + 12% + ' ')
         sprite.position.set(obj.x + 50,obj.y+24,obj.z-20);
         sprite.scale.set(300, 100,1); // 控制精灵大小，比如可视化中精灵大小表征数据大小 只需要设置x、y两个分量就可以

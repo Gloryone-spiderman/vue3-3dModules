@@ -16,6 +16,12 @@ export const syncRouter=[
 		component: () => import('@/views/test')
 	},
 	{
+		path: '/lights',
+		name: 'test',
+		meta: { title: '测试'},
+		component: () => import('@/views/lightsTest.html')
+	},
+	{
 		path: '/download',
 		name: 'download',
 		meta: {title: '下载'},

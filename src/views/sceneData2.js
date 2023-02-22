@@ -114,7 +114,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": -960
                     },
-                    childrens: [
+                    children: [
                         {
                             op: '-',
                             show: true,
@@ -953,7 +953,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 1350
                     },
-                    childrens: [
+                    children: [
                         // 财务
                         {
                             op: '-',
@@ -1660,7 +1660,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 1250
                     },
-                    childrens: [
+                    children: [
                         // 行政
                         {
                             op: '-',
@@ -1979,7 +1979,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": -100
                     },
-                    childrens: [
+                    children: [
                         {
                             op: '-',
                             show: true,
@@ -2307,7 +2307,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 490
                     },
-                    childrens: [
+                    children: [
                         {
                             op: '-',
                             show: true,
@@ -2905,7 +2905,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 1250
                     },
-                    childrens: [
+                    children: [
                         // 行政门
                         {
                             op: '-',
@@ -3196,7 +3196,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 760
                     },
-                    childrens: [
+                    children: [
                         // 财务门
                         {
                             op: '-',
@@ -3951,7 +3951,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 160
                     },
-                    childrens: [
+                    children: [
                         {
                             op: '-',
                             show: true,
@@ -4165,7 +4165,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 490
                     },
-                    childrens: [
+                    children: [
                         {
                             op: '-',
                             show: true,
@@ -4512,7 +4512,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 500
                     },
-                    childrens: [
+                    children: [
                         {
                             op: '-',
                             show: true,
@@ -5155,7 +5155,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 950
                     },
-                    childrens: [
+                    children: [
                         {
                             op: '-',
                             show: true,
@@ -5577,7 +5577,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 1510
                     },
-                    childrens: [
+                    children: [
 
                         {
                             op: '-',
@@ -5967,7 +5967,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 1810
                     },
-                    childrens: [
+                    children: [
                         {
                             op: '-',
                             show: true,
@@ -6260,7 +6260,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 1000
                     },
-                    childrens: [
+                    children: [
                         // 卫生间
                         {
                             op: '-',
@@ -6640,6 +6640,81 @@ export const ThreeData = {
                                 x: -1480,
                                 y: 50,
                                 z: 1150
+                            },
+                            skinColor:0x0a0707,
+                        },
+                        {
+                            show: true,
+                            name: 'windowCaseBottom',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 30,
+                            height: 5,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": -Math.PI/5
+                                }
+                            ],
+                            startDot: {
+                                x: -1060-220,
+                                y: 210,
+                                z: 1310-160
+                            },
+                            endDot: {
+                                x: -1260-220,
+                                y: 210,
+                                z: 1310-160
+                            },
+                            skinColor:0x0a0707,
+                        },
+                        {
+                            show: true,
+                            name: 'windowCaseBottom',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 30,
+                            height: 160,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": -Math.PI/5
+                                }
+                            ],
+                            startDot: {
+                                x: -1240-220,
+                                y: 130,
+                                z: 1250-160
+                            },
+                            endDot: {
+                                x: -1245-220,
+                                y: 130,
+                                z: 1250-160
+                            },
+                            skinColor:0x0a0707,
+                        },
+                        {
+                            show: true,
+                            name: 'windowCaseBottom',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 30,
+                            height: 160,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": -Math.PI/5
+                                }
+                            ],
+                            startDot: {
+                                x: -1075-220,
+                                y: 130,
+                                z: 1370-160
+                            },
+                            endDot: {
+                                x: -1080-220,
+                                y: 130,
+                                z: 1370-160
                             },
                             skinColor:0x0a0707,
                         },
@@ -7409,7 +7484,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 50
                     },
-                    // childrens: [
+                    // children: [
                     //     {
                     //         op: '-',
                     //         show: true,
@@ -7735,7 +7810,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 200
                     },
-                    childrens: [
+                    children: [
                         {
                             op: '-',
                             show: true,
@@ -8250,7 +8325,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 1120
                     },
-                    childrens: [
+                    children: [
                         {
                             op: '-',
                             show: true,
@@ -8577,7 +8652,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": -1640
                     },
-                    childrens: [
+                    children: [
                         // 销售
                         {
                             op: '-',
@@ -9139,7 +9214,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": -1370
                     },
-                    childrens: [
+                    children: [
                         {
                             op: '-',
                             show: true,
@@ -9558,7 +9633,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": -450
                     },
-                    childrens: [
+                    children: [
                         {
                             op: '-',
                             show: true,
@@ -9947,7 +10022,7 @@ export const ThreeData = {
                         "y": 120,
                         "z": 790
                     },
-                    childrens: [
+                    children: [
                         {
                             op: '-',
                             show: true,
@@ -10160,7 +10235,7 @@ export const ThreeData = {
             objType: 'desk',
             // objType: 'objPlant',
             objHandle:[{ direction: 'arb', handleScale: [100,100,100]}],
-            childrens:[
+            children:[
                 // 右办公区（技术）
                 {
                     name:"plant-right",
@@ -10674,7 +10749,7 @@ export const ThreeData = {
             objType: 'chair',
             // objType: 'objPlant',
             objHandle:[{ direction: 'arb', handleScale: [1,1,1]}],
-            childrens: [
+            children: [
                 // 右办公区（技术）
                 {
                     name:"plant-right",
