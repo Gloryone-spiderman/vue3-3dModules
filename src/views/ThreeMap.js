@@ -19,7 +19,12 @@ import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader'
 import TWEEN from '@tweenjs/tween.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import {RectAreaLightUniformsLib} from "three/examples/jsm/lights/RectAreaLightUniformsLib";
-import {RectAreaLightHelper} from "three/examples/jsm/helpers/RectAreaLightHelper";   //r100及以上
+import {RectAreaLightHelper} from "three/examples/jsm/helpers/RectAreaLightHelper";
+import {RenderPass} from "three/examples/jsm/postprocessing/RenderPass";
+import {ShaderPass} from "three/examples/jsm/postprocessing/ShaderPass";
+import {CopyShader} from "three/examples/jsm/shaders/CopyShader";
+import {EffectComposer} from "three/examples/jsm/postprocessing/EffectComposer";
+import {UnrealBloomPass} from "three/examples/jsm/postprocessing/UnrealBloomPass";   //r100及以上
 // var OrbitControls = require('three-orbit-controls')(THREE)  //r100 以下
 export default class ThreeMap {
     constructor(props,dataJson) {
@@ -37,8 +42,8 @@ export default class ThreeMap {
             level4:"#ff8d00",
             level5:"#ff0000",
         },dataJson.alarmColor);
-
         this.renderer=null;
+
         this.scene = null;//场景
         this.camera=null;
         this.objects = [];  //存放对象
@@ -276,7 +281,7 @@ export default class ThreeMap {
                     this.createSprite(obj)
                     break
                 case 'switch':
-                    this.createSprite(obj)
+                    this.createSwitch(obj)
                     break
                 // case 'cylinderPlant':  //自定义花
                 //     tempObj = this.createCylinderPlant(obj)
@@ -1424,10 +1429,11 @@ export default class ThreeMap {
             this.mouseClick.y = -(event.offsetY / this.dom.offsetHeight) * 2 + 1;
             this.raycaster.setFromCamera(this.mouseClick, this.camera);
             var intersects = this.raycaster.intersectObjects(this.objects);
+            let point = this.raycaster.intersectObjects(this.scene.children)[0]
+            console.log(point.point.x, point.point.z)
             if (intersects.length > 0) {
                 this.controls.enabled=false;
                 let SELECTED = intersects[0].object;
-                // console.log(SELECTED)
                 if(this.eventList != null && this.eventList.dbclick != null && this.eventList.dbclick.length > 0){
                     this.eventList.dbclick.forEach(function(_obj, index){
                         if ("string" == typeof (_obj.obj_name)) {
@@ -1887,22 +1893,52 @@ export default class ThreeMap {
         sprite.data=obj.data; //告警等级默认给1，给最低告警
         sprite.name="spriteAlarm";
         sprite.visible=true;
-        console.log(sprite)
         this.addObject(sprite);
         this.sprite.push(sprite);
     }
 
-
     createSwitch(obj) {
-        let sprite = this.makeTextSprite(' 温度：' + 12 + '℃ 湿度：' + 12% + ' ')
-        sprite.position.set(obj.x + 50,obj.y+24,obj.z-20);
-        sprite.scale.set(300, 100,1); // 控制精灵大小，比如可视化中精灵大小表征数据大小 只需要设置x、y两个分量就可以
-        sprite.data=obj.data; //告警等级默认给1，给最低告警
-        sprite.name="spriteAlarm";
-        sprite.visible=true;
-        console.log(sprite)
-        this.addObject(sprite);
-        this.sprite.push(sprite);
+        let switchObj = null
+        let bottomObj = {
+            show: true,
+            name: "cubedown",
+            uuid:"",
+            objType: 'cube',
+            width: 30,
+            height: 30,
+            depth: 10,
+            x: 0,
+            y: 0,
+            z: 0,
+            style: {
+                skinColor: 0x02e0f3,
+            }
+        }
+        let bottomCube = this.createCube(bottomObj)
+        let buttonObj = {
+            show: true,
+            name: "cubedown",
+            uuid:"",
+            objType: 'cube',
+            width: 20,
+            height: 20,
+            depth: 5,
+            rotation: [{
+                "direction": "x",
+                "degree": -Math.PI/10
+            }],
+            x: 0,
+            y: 0,
+            z: 5,
+            style: {
+                skinColor: 0xf8ede2,
+            }
+        }
+        let buttonCube = this.createCube(buttonObj)
+        switchObj = this.mergeModel('+', bottomCube, buttonCube)
+
+        switchObj.position.set(obj.x, obj.y, obj.z)
+        this.addObject(switchObj)
     }
 
     /* 绘制圆角矩形 */

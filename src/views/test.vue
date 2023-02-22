@@ -1,100 +1,190 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>bloomPass</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
 
-<div id="info">
-  <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - THREE.RectAreaLight<br/>
-  by <a href="http://github.com/abelnation" target="_blank" rel="noopener">abelnation</a>
-</div>
+    #container {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
 
+<body>
+<div id="container"></div>
+<button onclick="getC()" style="position: absolute; top: 50px;">getC</button>
+<!-- <script src="js/three.min.js"></script> -->
+<script src="js/tween.js"></script>
+<!-- <script src="js/stats.min.js"></script> -->
+<!-- <script src="js/OrbitControls.js"></script> -->
+<!-- 后期处理js -->
+<!--  -->
+<!-- <script src="js/shaders/ConvolutionShader.js"></script> -->
+<!-- <script> -->
 <script type="module">
-
-  import * as THREE from 'three';
-
-  import Stats from 'three/examples/jsm/libs/stats.module.js';
-
-  import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-
-  let renderer, scene, camera;
-  let stats;
-
+  import * as THREE from '../build/three.module.js';
+  import Stats from './jsm/libs/stats.module.js';
+  import { GUI } from './jsm/libs/dat.gui.module.js';
+  import { OrbitControls } from './jsm/controls/OrbitControls.js';
+  import { EffectComposer } from './jsm/postprocessing/EffectComposer.js'; // EffectComposer（效果组合器）对象
+  import { RenderPass } from './jsm/postprocessing/RenderPass.js'; // RenderPass/该通道在指定的场景和相机的基础上渲染出一个新场景
+  import { ShaderPass } from './jsm/postprocessing/ShaderPass.js'; // ShaderPass/使用该通道你可以传入一个自定义的着色器，用来生成高级的、自定义的后期处理通道
+  import { CopyShader } from './jsm/shaders/CopyShader.js'; // 传入了CopyShader着色器，用于拷贝渲染结果
+  import { BloomPass } from './jsm/postprocessing/BloomPass.js';
+  import { UnrealBloomPass } from './jsm/postprocessing/UnrealBloomPass.js'; // BloomPass/形成泛光的效果
+  // 需要用官方版本的tween.js
+  let container = document.getElementById('container');
+  let camera, scene, renderer;
+  let cubeGroup, labelGroup = [];
+  let stats, controls;
+  let renderOrder = 1
+  let bloomPass
+  var params = {
+    exposure: 1,
+    bloomStrength: 1.5,
+    bloomThreshold: 0,
+    bloomRadius: 0
+  };
+  let bloomComposer = null
   init();
-
+  update();
   function init() {
-
-    renderer = new THREE.WebGLRenderer( { antialias: true } );
-    renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    renderer.setAnimationLoop( animation );
-    renderer.outputEncoding = THREE.sRGBEncoding;
-    document.body.appendChild( renderer.domElement );
-
-    camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
-    camera.position.set( 0, 5, - 15 );
-
+    // scene
     scene = new THREE.Scene();
-
-    RectAreaLightUniformsLib.init();
-
-    const rectLight1 = new THREE.RectAreaLight( 0xff0000, 5, 4, 10 );
-    rectLight1.position.set( - 5, 5, 5 );
-    scene.add( rectLight1 );
-
-    const rectLight2 = new THREE.RectAreaLight( 0x00ff00, 5, 4, 10 );
-    rectLight2.position.set( 0, 5, 5 );
-    scene.add( rectLight2 );
-
-    const rectLight3 = new THREE.RectAreaLight( 0x0000ff, 5, 4, 10 );
-    rectLight3.position.set( 5, 5, 5 );
-    scene.add( rectLight3 );
-
-    scene.add( new RectAreaLightHelper( rectLight1 ) );
-    scene.add( new RectAreaLightHelper( rectLight2 ) );
-    scene.add( new RectAreaLightHelper( rectLight3 ) );
-
-    const geoFloor = new THREE.BoxGeometry( 2000, 0.1, 2000 );
-    const matStdFloor = new THREE.MeshStandardMaterial( { color: 0x808080, roughness: 0.1, metalness: 0 } );
-    const mshStdFloor = new THREE.Mesh( geoFloor, matStdFloor );
-    scene.add( mshStdFloor );
-
-    const geoKnot = new THREE.TorusKnotGeometry( 1.5, 0.5, 200, 16 );
-    const matKnot = new THREE.MeshStandardMaterial( { color: 0xffffff, roughness: 0, metalness: 0 } );
-    const meshKnot = new THREE.Mesh( geoKnot, matKnot );
-    meshKnot.name = 'meshKnot';
-    meshKnot.position.set( 0, 5, 0 );
-    scene.add( meshKnot );
-
-    const controls = new OrbitControls( camera, renderer.domElement );
-    controls.target.copy( meshKnot.position );
-    controls.update();
-
-    //
-
-    window.addEventListener( 'resize', onWindowResize );
-
+    // camera
+    let frustumSize = 150;
+    let aspect = container.clientWidth / container.clientHeight;
+    camera = new THREE.PerspectiveCamera(
+        45,
+        window.innerWidth / window.innerHeight,
+        1,
+        50000
+    )
+    camera.position.set(306, 1126, 7976);
+    camera.lookAt(new THREE.Vector3(0, 0, 0));
+    var ambientLight = new THREE.AmbientLight('#ffffff', 0.7) // offline
+    scene.add(ambientLight)
+    // renderer
+    renderer = new THREE.WebGLRenderer();
+    renderer.autoClear = false
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    container.appendChild(renderer.domElement);
+    renderer.render(scene, camera);
+    addCubes()
+    addBloomPass()
     stats = new Stats();
-    let tag = document.getElementById('info')
-    tag.appendChild( stats.dom );
-
+    container.appendChild(stats.dom);
+    controls = new OrbitControls(camera, renderer.domElement);
+    window.addEventListener('resize', onWindowResize, false);
   }
-
-  function onWindowResize() {
-
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    camera.aspect = ( window.innerWidth / window.innerHeight );
-    camera.updateProjectionMatrix();
-
-  }
-
-  function animation( time ) {
-
-    const mesh = scene.getObjectByName( 'meshKnot' );
-    mesh.rotation.y = time / 1000;
-
-    renderer.render( scene, camera );
-
+  function update() {
+    // controls.update();
     stats.update();
-
+    // 渲染器清除颜色、深度或模板缓存. 此方法将颜色缓存初始化为当前颜色
+    renderer.clear()
+    camera.layers.set(1)
+    if (bloomComposer) { bloomComposer.render() }
+    // 清除深度缓存
+    renderer.clearDepth()
+    camera.layers.set(0)
+    renderer.render(scene, camera)
+    requestAnimationFrame(update);
+  }
+  function getC() {
+    console.log(camera)
+  }
+  function onWindowResize() {
+    let frustumSize = 200;
+    let aspect = container.clientWidth / container.clientHeight;
+    camera.left = frustumSize * aspect / -2;
+    camera.right = frustumSize * aspect / 2;
+    camera.top = frustumSize / 2;
+    camera.bottom = frustumSize / -2;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
   }
 
+  function addBloomPass() {
+    // RenderPass这个通道会渲染场景，但不会将渲染结果输出到屏幕上
+    const renderScene = new RenderPass(scene, camera)
+    const effectCopy = new ShaderPass(CopyShader); //传入了CopyShader着色器，用于拷贝渲染结果
+    effectCopy.renderToScreen = true;
+    // THREE.BloomPass(strength, kernelSize, sigma, Resolution)
+    // strength 定义泛光效果的强度，值越高，明亮的区域越明亮，而且渗入较暗区域的也就越多
+    // kernelSize 控制泛光的偏移量
+    // sigma 控制泛光的锐利程度，值越高，泛光越模糊
+    // Resolution 定义泛光的解析图，如果该值太低，结果的方块化就会越严重
+    // const bloomPass = new BloomPass(2, 25, 4.0, 256); //BloomPass通道效果
+    //创建效果组合器对象，可以在该对象上添加后期处理通道，通过配置该对象，使它可以渲染我们的场景，并应用额外的后期处理步骤，在render循环中，使用EffectComposer渲染场景、应用通道，并输出结果。
+    bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.5, 0.4,
+        0.85);
+    bloomPass.renderToScreen = true;
+    bloomPass.threshold = params.bloomThreshold;
+    bloomPass.strength = params.bloomStrength;
+    bloomPass.radius = params.bloomRadius;
+
+    bloomComposer = new EffectComposer(renderer)
+    bloomComposer.setSize(window.innerWidth, window.innerHeight);
+    bloomComposer.addPass(renderScene);
+    bloomComposer.addPass(bloomPass);
+    bloomComposer.addPass(effectCopy);
+    bloomComposer.render()
+  }
+  function addCubes() {
+    // 创建两个box， 将box进行layers进行分层是重要代码，camera默认渲染0层
+    let texture = new THREE.TextureLoader().load("./img/backav9.jpg")
+    let texture1 = new THREE.TextureLoader().load("./img/py.png")
+    var geometry1 = new THREE.BoxGeometry(400, 400, 400);
+    var material1 = new THREE.MeshBasicMaterial({
+      map: texture
+    });
+    var cube1 = new THREE.Mesh(geometry1, material1);
+    // 重要代码，将当前创建的box分配到0层
+    // cube1.layers.set(1) // 和方案一仅仅只有这里不同
+    cube1.layers.enable(1); // 分层
+    cube1.position.set(1200, 0, 0)
+    scene.add(cube1);
+    var geometry2 = new THREE.BoxGeometry(400, 400, 400);
+    var material2 = new THREE.MeshBasicMaterial({
+      map: texture1
+    });
+    var cube2 = new THREE.Mesh(geometry2, material2);
+    // 重要代码，将当前创建的box分配到1层
+    // cube2.layers.set(0) // 和方案一仅仅只有这里不同
+    cube2.layers.enable(0); // 分层
+    cube2.position.set(600, 0, 0)
+    scene.add(cube2);
+  }
+  function initGui() {
+    var gui = new GUI();
+    gui.add(params, 'exposure', 0.1, 2).onChange(function (value) {
+      renderer.toneMappingExposure = Math.pow(value, 4.0);
+    });
+    gui.add(params, 'bloomThreshold', 0.0, 1.0).onChange(function (value) {
+      bloomPass.threshold = Number(value);
+    });
+    gui.add(params, 'bloomStrength', 0.0, 3.0).onChange(function (value) {
+      bloomPass.strength = Number(value);
+    });
+    gui.add(params, 'bloomRadius', 0.0, 1.0).step(0.01).onChange(function (value) {
+      bloomPass.radius = Number(value);
+    });
+  }
+  initGui()
 </script>
 </body>
+
 </html>

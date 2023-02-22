@@ -11793,6 +11793,66 @@ export const ThreeData = {
             }
         },
 
+        {
+            "show": true,
+            "uuid": "",
+            "name": "总经理室1",
+            "objType": "switch",
+            "rotation": [
+                {
+                    "direction": "y",
+                    "degree": Math.PI* 15/40
+                }
+            ],
+            "x": -1016,
+            "y": 150,
+            "z": 725,
+            "style": {
+                "skinColor": 16448250,
+                "skin": {
+                    "skin_behind": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
+                    },
+                    "skin_fore": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
+                    },
+                    "skin_left": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
+                    },
+                    "skin_right": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
+                    },
+                    "skin_up": {
+                        "skinColor": 16777215,
+                        "imgUrl": "wood.jpg",
+                        "repeatx": true,
+                        "repeaty": true,
+                        "width": 1280,
+                        "height": 1280
+                    }
+                },
+            }
+        }
 
     ]
 }
