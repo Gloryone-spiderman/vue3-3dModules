@@ -38,8 +38,40 @@ export const ThreeData = {
                 {
                     "uuid": "",
                     "name": "wall1",
-                    "skin": {
 
+                    "skin": {
+                        "skin_behind": {
+                            "skinColor": 16777215,
+                            "imgUrl": "floor3.png",
+                            "repeatx": true,
+                            "repeaty": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        "skin_fore": {
+                            "skinColor": 16777215,
+                            "imgUrl": "floor3.png",
+                            "repeatx": true,
+                            "repeaty": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        "skin_left": {
+                            "skinColor": 16777215,
+                            "imgUrl": "floor3.png",
+                            "repeatx": true,
+                            "repeaty": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        "skin_right": {
+                            "skinColor": 16777215,
+                            "imgUrl": "floor3.png",
+                            "repeatx": true,
+                            "repeaty": true,
+                            "width": 128,
+                            "height": 128
+                        },
                         "skin_up": {
                             "skinColor": 16777215,
                             "imgUrl": "floor3.png",
@@ -11712,7 +11744,7 @@ export const ThreeData = {
         {
             show:true,
             uuid: "",
-            name: '椅子',
+            name: '花',
             objType: 'objPlant',
             // objType: 'objPlant',
             objHandle:[{ direction: 'arb', handleScale: [1,1,1]}],
@@ -11749,6 +11781,74 @@ export const ThreeData = {
                     x: 20,
                     y: 0,
                     z: 441,
+                },
+
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:0.5*Math.PI},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -188,
+                    y: 0,
+                    z: 93,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:0.5*Math.PI},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -505,
+                    y: 0,
+                    z: 109,
+                },
+
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:0.5*Math.PI},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -1489,
+                    y: 0,
+                    z: -273,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:0.5*Math.PI},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -1349,
+                    y: 0,
+                    z: -1289,
+                },
+
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:0.5*Math.PI},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 623,
+                    y: 0,
+                    z: -19,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:0.5*Math.PI},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 1351,
+                    y: 0,
+                    z: -344,
+                },
+
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:0.5*Math.PI},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 2032,
+                    y: 0,
+                    z: -488,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:0.5*Math.PI},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 2098,
+                    y: 0,
+                    z: -1251,
                 },
             ]
         },
@@ -12047,359 +12147,6 @@ export const ThreeData = {
                 },
             }
         },
-        //
-        // {
-        //     "show": true,
-        //     "uuid": "",
-        //     "name": "左总经理室1",
-        //     "objType": "switch",
-        //     "objHandle": [
-        //         {
-        //             "direction": "y",
-        //             "degree": -Math.PI* 6/40
-        //         }
-        //     ],
-        //     "x": -1016,
-        //     "y": 150,
-        //     "z": 725,
-        //     "style": {
-        //         "skinColor": 0xf8ede2
-        //     },
-        //     data: {
-        //         contextMenu: true,
-        //         click: true,
-        //         menuContent: [
-        //             {
-        //                 name: '开灯',
-        //                 click: 1,  //1：请求，2：跳转
-        //                 target: '_black', //跳转方式
-        //                 url: '/iclock/light_state',
-        //                 sendMethod: 0, // 0：get，1：post
-        //                 params: {
-        //                     test: 1
-        //                 }
-        //             }
-        //         ],
-        //         clickContent: {
-        //             click: 2, //1：请求，2：跳转
-        //             target: '_black', //跳转方式
-        //             url: '/iclock/light_state',
-        //             sendMethod: 0, // 0：get，1：post
-        //             params: {
-        //                 test: 1
-        //             }
-        //         }
-        //
-        //     }
-        // },
-        // {
-        //     "show": true,
-        //     "uuid": "",
-        //     "name": "左门",
-        //     "objType": "switch",
-        //     "objHandle": [
-        //         {
-        //             "direction": "y",
-        //             "degree": Math.PI* 14/40
-        //         }
-        //     ],
-        //     "x": -764,
-        //     "y": 150,
-        //     "z": 378,
-        //     "style": {
-        //         "skinColor": 0xf8ede2
-        //     },
-        //     data: {
-        //         contextMenu: true,
-        //         click: true,
-        //         menuContent: [
-        //             {
-        //                 name: '开灯',
-        //                 click: 1,  //1：请求，2：跳转
-        //                 target: '_black', //跳转方式
-        //                 url: '/iclock/light_state',
-        //                 sendMethod: 0, // 0：get，1：post
-        //                 params: {
-        //                     test: 1
-        //                 }
-        //             }
-        //         ],
-        //         clickContent: {
-        //             click: 2, //1：请求，2：跳转
-        //             target: '_black', //跳转方式
-        //             url: '/iclock/light_state',
-        //             sendMethod: 0, // 0：get，1：post
-        //             params: {
-        //                 test: 1
-        //             }
-        //         }
-        //
-        //     }
-        // },
-        // {
-        //     "show": true,
-        //     "uuid": "",
-        //     "name": "601门灯",
-        //     "objType": "switch",
-        //     "objHandle": [
-        //         {
-        //             "direction": "y",
-        //             "degree": -Math.PI* 26/40
-        //         }
-        //     ],
-        //     "x": -741,
-        //     "y": 150,
-        //     "z": 257,
-        //     "style": {
-        //         "skinColor": 0xf8ede2
-        //     },
-        //     data: {
-        //         contextMenu: true,
-        //         click: true,
-        //         menuContent: [
-        //             {
-        //                 name: '开灯',
-        //                 click: 1,  //1：请求，2：跳转
-        //                 target: '_black', //跳转方式
-        //                 url: '/iclock/light_state',
-        //                 sendMethod: 0, // 0：get，1：post
-        //                 params: {
-        //                     test: 1
-        //                 }
-        //             }
-        //         ],
-        //         clickContent: {
-        //             click: 2, //1：请求，2：跳转
-        //             target: '_black', //跳转方式
-        //             url: '/iclock/light_state',
-        //             sendMethod: 0, // 0：get，1：post
-        //             params: {
-        //                 test: 1
-        //             }
-        //         }
-        //
-        //     }
-        // },
-        // {
-        //     "show": true,
-        //     "uuid": "",
-        //     "name": "601技术",
-        //     "objType": "switch",
-        //     "objHandle": [
-        //         {
-        //             "direction": "y",
-        //             "degree": -Math.PI* 2/3
-        //         }
-        //     ],
-        //     "x": -1274,
-        //     "y": 150,
-        //     "z": 693,
-        //     "style": {
-        //         "skinColor": 0xf8ede2
-        //     },
-        //     data: {
-        //         contextMenu: true,
-        //         click: true,
-        //         menuContent: [
-        //             {
-        //                 name: '开灯',
-        //                 click: 1,  //1：请求，2：跳转
-        //                 target: '_black', //跳转方式
-        //                 url: '/iclock/light_state',
-        //                 sendMethod: 0, // 0：get，1：post
-        //                 params: {
-        //                     test: 1
-        //                 }
-        //             }
-        //         ],
-        //         clickContent: {
-        //             click: 2, //1：请求，2：跳转
-        //             target: '_black', //跳转方式
-        //             url: '/iclock/light_state',
-        //             sendMethod: 0, // 0：get，1：post
-        //             params: {
-        //                 test: 1
-        //             }
-        //         }
-        //
-        //     }
-        // },
-        // {
-        //     "show": true,
-        //     "uuid": "",
-        //     "name": "601会议室",
-        //     "objType": "switch",
-        //     "objHandle": [
-        //         {
-        //             "direction": "y",
-        //             "degree": -Math.PI* 1/20
-        //         }
-        //     ],
-        //     "x": -1980,
-        //     "y": 150,
-        //     "z": -125,
-        //     "style": {
-        //         "skinColor": 0xf8ede2
-        //     },
-        //     data: {
-        //         contextMenu: true,
-        //         click: true,
-        //         menuContent: [
-        //             {
-        //                 name: '开灯',
-        //                 click: 1,  //1：请求，2：跳转
-        //                 target: '_black', //跳转方式
-        //                 url: '/iclock/light_state',
-        //                 sendMethod: 0, // 0：get，1：post
-        //                 params: {
-        //                     test: 1
-        //                 }
-        //             }
-        //         ],
-        //         clickContent: {
-        //             click: 2, //1：请求，2：跳转
-        //             target: '_black', //跳转方式
-        //             url: '/iclock/light_state',
-        //             sendMethod: 0, // 0：get，1：post
-        //             params: {
-        //                 test: 1
-        //             }
-        //         }
-        //
-        //     }
-        // },
-        // {
-        //     "show": true,
-        //     "uuid": "",
-        //     "name": "601销售1",
-        //     "objType": "switch",
-        //     "objHandle": [
-        //         {
-        //             "direction": "y",
-        //             "degree": -Math.PI* 11/20
-        //         }
-        //     ],
-        //     "x": -1581,
-        //     "y": 150,
-        //     "z": -300,
-        //     "style": {
-        //         "skinColor": 0xf8ede2
-        //     },
-        //     data: {
-        //         contextMenu: true,
-        //         click: true,
-        //         menuContent: [
-        //             {
-        //                 name: '开灯',
-        //                 click: 1,  //1：请求，2：跳转
-        //                 target: '_black', //跳转方式
-        //                 url: '/iclock/light_state',
-        //                 sendMethod: 0, // 0：get，1：post
-        //                 params: {
-        //                     test: 1
-        //                 }
-        //             }
-        //         ],
-        //         clickContent: {
-        //             click: 2, //1：请求，2：跳转
-        //             target: '_black', //跳转方式
-        //             url: '/iclock/light_state',
-        //             sendMethod: 0, // 0：get，1：post
-        //             params: {
-        //                 test: 1
-        //             }
-        //         }
-        //
-        //     }
-        // },
-        // {
-        //     "show": true,
-        //     "uuid": "",
-        //     "name": "601销售2",
-        //     "objType": "switch",
-        //     "objHandle": [
-        //         {
-        //             "direction": "y",
-        //             "degree": -Math.PI* 1/20
-        //         }
-        //     ],
-        //     "x": -1681,
-        //     "y": 150,
-        //     "z": -751,
-        //     "style": {
-        //         "skinColor": 0xf8ede2
-        //     },
-        //     data: {
-        //         contextMenu: true,
-        //         click: true,
-        //         menuContent: [
-        //             {
-        //                 name: '开灯',
-        //                 click: 1,  //1：请求，2：跳转
-        //                 target: '_black', //跳转方式
-        //                 url: '/iclock/light_state',
-        //                 sendMethod: 0, // 0：get，1：post
-        //                 params: {
-        //                     test: 1
-        //                 }
-        //             }
-        //         ],
-        //         clickContent: {
-        //             click: 2, //1：请求，2：跳转
-        //             target: '_black', //跳转方式
-        //             url: '/iclock/light_state',
-        //             sendMethod: 0, // 0：get，1：post
-        //             params: {
-        //                 test: 1
-        //             }
-        //         }
-        //
-        //     }
-        // },
-        // {
-        //     "show": true,
-        //     "uuid": "",
-        //     "name": "601总经理室2",
-        //     "objType": "switch",
-        //     "objHandle": [
-        //         {
-        //             "direction": "y",
-        //             "degree": -Math.PI* 21/20
-        //         }
-        //     ],
-        //     "x": -1674,
-        //     "y": 150,
-        //     "z": -770,
-        //     "style": {
-        //         "skinColor": 0xf8ede2
-        //     },
-        //     data: {
-        //         contextMenu: true,
-        //         click: true,
-        //         menuContent: [
-        //             {
-        //                 name: '开灯',
-        //                 click: 1,  //1：请求，2：跳转
-        //                 target: '_black', //跳转方式
-        //                 url: '/iclock/light_state',
-        //                 sendMethod: 0, // 0：get，1：post
-        //                 params: {
-        //                     test: 1
-        //                 }
-        //             }
-        //         ],
-        //         clickContent: {
-        //             click: 2, //1：请求，2：跳转
-        //             target: '_black', //跳转方式
-        //             url: '/iclock/light_state',
-        //             sendMethod: 0, // 0：get，1：post
-        //             params: {
-        //                 test: 1
-        //             }
-        //         }
-        //
-        //     }
-        // }
 
         {
             "show": false,
@@ -12438,229 +12185,10 @@ export const ThreeData = {
                 ]
             }
         },
-        {
-            "show": true,
-            "name": "601门厅灯",
-            "objType": "switchSprite",
-            "x": -1288,
-            "y": 200,
-            "z": 224,
-            "data": {
-                "url": "/iclock/light_state",
-                "sendMethod": 'get',
-                "params": {
-                    'entity_id':'switch.dhkg01_cloud_521737'
-                },
-                switchList: [
-                    {
-                        name: '灯',
-                        id:'switch.dhkg01_cloud_521737',
-                        url: '/iclock/light',
-                        "sendMethod": 'get',
-                        "params": {
-                            entity_id:'switch.dhkg01_cloud_521737'
-                        },
-                        type: 'switch'
-                    }
-                ]
-            }
-        },
-        {
-            "show": true,
-            "name": "601技术",
-            "objType": "switchSprite",
-            "x": -1603,
-            "y": 200,
-            "z": 496,
-            "data": {
-                "url": "/iclock/light_state",
-                "sendMethod": 'get',
-                "params": {
-                    entity_id:'switch.dhkg02_cloud_979243,switch.dhkg02_cloud_979243_switch_2'
-                },
-                switchList: [
-                    {
-                        name: '灯1',
-                        id: 'switch.dhkg02_cloud_979243',
-                        url: '/iclock/light',
-                        "sendMethod": 'get',
-                        "params": {
-                            entity_id:'switch.dhkg02_cloud_979243'
-                        },
-                        type: 'switch'
-                    },
-                    {
-                        name: '灯2',
-                        id: 'switch.dhkg02_cloud_979243_switch_2',
-                        url: '/iclock/light',
-                        "sendMethod": 'get',
-                        "params": {
-                            entity_id:'switch.dhkg02_cloud_979243_switch_2'
-                        },
-                        type: 'switch'
-                    }
-                ]
-            }
-        },
-        {
-            "show": true,
-            "name": "601会议室",
-            "objType": "switchSprite",
-            "x": -2119,
-            "y": 200,
-            "z": 170,
-            "data": {
-                "url": "/iclock/light_state",
-                "sendMethod": 'get',
-                "params": {
-                    entity_id:'switch.dhkg01_cloud_546359'
-                },
-                switchList: [
-                    {
-                        name: '灯',
-                        id: 'switch.dhkg01_cloud_546359',
-                        url: '/iclock/light',
-                        "sendMethod": 'get',
-                        "params": {
-                            entity_id:'switch.dhkg01_cloud_546359'
-                        },
-                        type: 'switch'
-                    }
-                ]
-            }
-        },
-        {
-            "show": true,
-            "name": "601销售",
-            "objType": "switchSprite",
-            "x": -1937,
-            "y": 200,
-            "z": -356,
-            "data": {
-                "url": "/iclock/light_state",
-                "sendMethod": 'get',
-                "params": {
-                    entity_id:'switch.dhkg01_cloud_665820'
-                },
-                switchList: [
-                    {
-                        name: '灯',
-                        id: 'switch.dhkg01_cloud_665820',
-                        url: '/iclock/light',
-                        "sendMethod": 'get',
-                        "params": {
-                            entity_id:'switch.dhkg01_cloud_665820'
-                        },
-                        type: 'switch'
-                    }
-                ]
-            }
-        },
-        {
-            "show": true,
-            "name": "601销售",
-            "objType": "switchSprite",
-            "x": -1918,
-            "y": 200,
-            "z": -653,
-            "data": {
-                "url": "/iclock/light_state",
-                "sendMethod": 'get',
-                "params": {
-                    entity_id:'switch.dhkg01_cloud_668031'
-                },
-                switchList: [
-                    {
-                        name: '灯',
-                        id: 'switch.dhkg01_cloud_668031',
-                        url: '/iclock/light',
-                        "sendMethod": 'get',
-                        "params": {
-                            entity_id:'switch.dhkg01_cloud_668031'
-                        },
-                        type: 'switch'
-                    }
-                ]
-            }
-        },
-        {
-            "show": true,
-            "name": "601总经理室",
-            "objType": "switchSprite",
-            "x": -1613,
-            "y": 200,
-            "z": -1147,
-            "data": {
-                "url": "/iclock/light_state",
-                "sendMethod": 'get',
-                "params": {
-                    entity_id:'switch.dhkg02_cloud_327127,switch.dhkg02_cloud_327127_switch_2'
-                },
-                switchList: [
-                    {
-                        name: '灯1',
-                        id: 'switch.dhkg02_cloud_327127',
-                        url: '/iclock/light',
-                        "sendMethod": 'get',
-                        "params": {
-                            entity_id:'switch.dhkg02_cloud_327127'
-                        },
-                        type: 'switch'
-                    },
-                    {
-                        name: '灯2',
-                        id: 'switch.dhkg02_cloud_327127_switch_2',
-                        url: '/iclock/light',
-                        "sendMethod": 'get',
-                        "params": {
-                            entity_id:'switch.dhkg02_cloud_327127_switch_2'
-                        },
-                        type: 'switch'
-                    }
-                ]
-            }
-        },
-        {
-            "show": true,
-            "name": "总经理室",
-            "objType": "switchSprite",
-            "x": -1116,
-            "y": 200,
-            "z": 897,
-            "data": {
-                "url": "/iclock/light_state",
-                "sendMethod": 'get',
-                "params": {
-                    entity_id:'switch.dhkg02_cloud_977998,switch.dhkg02_cloud_977998_switch_2'
-                },
-                switchList: [
-                    {
-                        name: '灯1',
-                        id: 'switch.dhkg02_cloud_977998',
-                        url: '/iclock/light',
-                        "sendMethod": 'get',
-                        "params": {
-                            entity_id:'switch.dhkg02_cloud_977998'
-                        },
-                        type: 'switch'
-                    },
-                    {
-                        name: '灯2',
-                        id: 'switch.dhkg02_cloud_977998_switch_2',
-                        url: '/iclock/light',
-                        "sendMethod": 'get',
-                        "params": {
-                            entity_id:'switch.dhkg02_cloud_977998_switch_2'
-                        },
-                        type: 'switch'
-                    }
-                ]
-            }
-        },
 
         {
             "show": true,
-            "name": "懂事长室",
+            "name": "董事长室",
             "objType": "switchSprite",
             "x": 1857,
             "y": 200,
@@ -12932,6 +12460,302 @@ export const ThreeData = {
                         type: 'switch'
                     }
                 ]
+            }
+        },
+
+        {
+            "show": true,
+            "name": "601门厅灯",
+            "objType": "switchSprite",
+            "x": -1288,
+            "y": 200,
+            "z": 224,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    'entity_id':'switch.dhkg01_cloud_521737'
+                },
+                switchList: [
+                    {
+                        name: '灯',
+                        id:'switch.dhkg01_cloud_521737',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg01_cloud_521737'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "601技术",
+            "objType": "switchSprite",
+            "x": -1603,
+            "y": 200,
+            "z": 496,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg02_cloud_979243,switch.dhkg02_cloud_979243_switch_2'
+                },
+                switchList: [
+                    {
+                        name: '灯1',
+                        id: 'switch.dhkg02_cloud_979243',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_979243'
+                        },
+                        type: 'switch'
+                    },
+                    {
+                        name: '灯2',
+                        id: 'switch.dhkg02_cloud_979243_switch_2',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_979243_switch_2'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "601会议室",
+            "objType": "switchSprite",
+            "x": -2119,
+            "y": 200,
+            "z": 170,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg01_cloud_546359'
+                },
+                switchList: [
+                    {
+                        name: '灯',
+                        id: 'switch.dhkg01_cloud_546359',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg01_cloud_546359'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "601销售",
+            "objType": "switchSprite",
+            "x": -1937,
+            "y": 200,
+            "z": -356,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg01_cloud_665820'
+                },
+                switchList: [
+                    {
+                        name: '灯',
+                        id: 'switch.dhkg01_cloud_665820',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg01_cloud_665820'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "601销售",
+            "objType": "switchSprite",
+            "x": -1918,
+            "y": 200,
+            "z": -653,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg01_cloud_668031'
+                },
+                switchList: [
+                    {
+                        name: '灯',
+                        id: 'switch.dhkg01_cloud_668031',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg01_cloud_668031'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "601总经理室",
+            "objType": "switchSprite",
+            "x": -1613,
+            "y": 200,
+            "z": -1147,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg02_cloud_327127,switch.dhkg02_cloud_327127_switch_2'
+                },
+                switchList: [
+                    {
+                        name: '灯1',
+                        id: 'switch.dhkg02_cloud_327127',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_327127'
+                        },
+                        type: 'switch'
+                    },
+                    {
+                        name: '灯2',
+                        id: 'switch.dhkg02_cloud_327127_switch_2',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_327127_switch_2'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "总经理室",
+            "objType": "switchSprite",
+            "x": -1116,
+            "y": 200,
+            "z": 897,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg02_cloud_977998,switch.dhkg02_cloud_977998_switch_2'
+                },
+                switchList: [
+                    {
+                        name: '灯1',
+                        id: 'switch.dhkg02_cloud_977998',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_977998'
+                        },
+                        type: 'switch'
+                    },
+                    {
+                        name: '灯2',
+                        id: 'switch.dhkg02_cloud_977998_switch_2',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_977998_switch_2'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        // 董事长室水浸
+        {
+            "show": true,
+            "objType": "switchSprite",
+            "x": 1700,
+            "y": 200,
+            "z": 1223,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'binary_sensor.bmcn01_cloud_u05o01_state'
+                },
+                switchList: []
+            }
+        },
+        {
+            "show": true,
+            "objType": "switchSprite",
+            "x": 145,
+            "y": 200,
+            "z": 601,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'binary_sensor.bmcn01_cloud_a0lg00_state'
+                },
+                switchList: []
+            }
+        },
+        {
+            "show": true,
+            "objType": "switchSprite",
+            "x": -435,
+            "y": 200,
+            "z": 332,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'sensor.mcn02_cloud_ro5g00_level'
+                },
+                switchList: []
+            }
+        },
+        {
+            "show": true,
+            "objType": "switchSprite",
+            "x": 1412,
+            "y": 200,
+            "z": 541,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'wsd1'
+                },
+                switchList: []
+            }
+        },
+        {
+            "show": true,
+            "objType": "switchSprite",
+            "x": -1233,
+            "y": 200,
+            "z": 363,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'wsd2'
+                },
+                switchList: []
             }
         },
 
