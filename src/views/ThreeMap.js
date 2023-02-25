@@ -280,13 +280,16 @@ export default class ThreeMap {
                 case 'sprite':
                     this.createSprite(obj)
                     break
+                case 'switchSprite':
+                    this.createSwitchSprite(obj)
+                    break
                 case 'switch':
                     this.createSwitch(obj)
                     break
-                // case 'cylinderPlant':  //自定义花
-                //     tempObj = this.createCylinderPlant(obj)
-                //     this.addObject(tempObj,"scene");
-                //     break;
+                case 'cylinderPlant':  //自定义花
+                    tempObj = this.createCylinderPlant(obj)
+                    this.addObject(tempObj,"scene");
+                    break;
                 case 'objPlant':  //模型花
                     this.createObjPlant(obj);
                     break;
@@ -1897,6 +1900,17 @@ export default class ThreeMap {
         this.sprite.push(sprite);
     }
 
+    createSwitchSprite(obj) {
+        let sprite = this.makeTextSprite(' 温度：' + 12 + '℃ 湿度：' + 12% + ' ')
+        sprite.position.set(obj.x + 50,obj.y+24,obj.z-20);
+        sprite.scale.set(300, 100,1); // 控制精灵大小，比如可视化中精灵大小表征数据大小 只需要设置x、y两个分量就可以
+        sprite.data=obj.data; //告警等级默认给1，给最低告警
+        sprite.name="spriteAlarm";
+        sprite.visible=true;
+        this.addObject(sprite);
+        this.sprite.push(sprite);
+    }
+
     createSwitch(obj) {
         let switchObj = null
         let bottomObj = {
@@ -1931,13 +1945,15 @@ export default class ThreeMap {
             y: 0,
             z: 5,
             style: {
-                skinColor: 0xf8ede2,
+                skinColor: obj.style.skinColor || 0xf8ede2,
             }
         }
         let buttonCube = this.createCube(buttonObj)
         switchObj = this.mergeModel('+', bottomCube, buttonCube)
 
         switchObj.position.set(obj.x, obj.y, obj.z)
+        switchObj.objHandle = obj.objHandle
+        switchObj = this.handleObj(switchObj)
         this.addObject(switchObj)
     }
 

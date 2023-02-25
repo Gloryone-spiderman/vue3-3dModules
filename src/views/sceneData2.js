@@ -21,6 +21,137 @@ export const ThreeData = {
                 }
             }
         },
+
+        {
+            "show": true,
+            "uuid": "",
+            "name": "wall",
+            "objType": "wall",
+            "depth": 1510,
+            "width": 100,
+            "height": 9,
+            "style": {
+                "skinColor": 16777215
+            },
+            wallData: [
+                // 露台
+                {
+                    "uuid": "",
+                    "name": "wall1",
+                    "skin": {
+
+                        "skin_up": {
+                            "skinColor": 16777215,
+                            "imgUrl": "floor3.png",
+                            "repeatx": true,
+                            "repeaty": true,
+                            "width": 128,
+                            "height": 128
+                        }
+                    },
+                    "startDot": {
+                        "x": -1600,
+                        "y": 5,
+                        "z": -595
+                    },
+                    "endDot": {
+                        "x": 2160,
+                        "y": 5,
+                        "z": -595
+                    },
+                    children: [
+                        {
+                            op: '-',
+                            show: true,
+                            uuid: "",
+                            name: 'doorhole',
+                            objType: 'doorhole',
+                            depth: 400,
+                            height: 220,
+                            startDot: {
+                                x: 2151,
+                                y: 110,
+                                z: 100
+                            },
+                            endDot: {
+                                x: 711,
+                                y: 110,
+                                z: 100
+                            },
+                        },
+                        {
+                            op: '-',
+                            show: true,
+                            uuid: "",
+                            name: 'doorhole',
+                            objType: 'doorhole',
+                            depth: 200,
+                            height: 220,
+                            startDot: {
+                                x: 2161,
+                                y: 110,
+                                z: -200
+                            },
+                            endDot: {
+                                x: 1461,
+                                y: 110,
+                                z: -200
+                            },
+                        },
+                        {
+                            op: '-',
+                            show: true,
+                            uuid: "",
+                            name: 'doorhole',
+                            objType: 'doorhole',
+                            depth: 432,
+                            height: 220,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": Math.PI* 31/80
+                                }
+                            ],
+                            "startDot": {
+                                "x": -1171,
+                                "y": 0,
+                                "z": -371
+                            },
+                            "endDot": {
+                                "x": -1171,
+                                "y": 0,
+                                "z": 721
+                            }
+                        },
+                        {
+                            op: '-',
+                            show: true,
+                            uuid: "",
+                            name: 'doorhole',
+                            objType: 'doorhole',
+                            depth: 200,
+                            height: 220,
+                            "rotation": [
+                                {
+                                    "direction": "y",
+                                    "degree": -Math.PI/20
+                                }
+                            ],
+                            "startDot": {
+                                "x": -1600,
+                                "y": 0,
+                                "z": -1361
+                            },
+                            "endDot": {
+                                "x": -1600,
+                                "y": 0,
+                                "z": -196
+                            }
+                        }
+                    ]
+                },
+            ]
+        },
         {
             "show": true,
             "uuid": "",
@@ -39,8 +170,40 @@ export const ThreeData = {
                     "name": "wall1",
                     "skin": {
                         "skin_behind": {
-                            "skinColor": 1,
-                            "imgUrl": "wall.png",
+                            "skinColor": 16777215,
+                            "imgUrl": "wall2.png",
+                            "repeatx": true,
+                            "repeaty": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        "skin_fore": {
+                            "skinColor": 16777215,
+                            "imgUrl": "wall2.png",
+                            "repeatx": true,
+                            "repeaty": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        "skin_left": {
+                            "skinColor": 16777215,
+                            "imgUrl": "wall2.png",
+                            "repeatx": true,
+                            "repeaty": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        "skin_right": {
+                            "skinColor": 16777215,
+                            "imgUrl": "wall2.png",
+                            "repeatx": true,
+                            "repeaty": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        "skin_up": {
+                            "skinColor": 16777215,
+                            "imgUrl": "wall2.png",
                             "repeatx": true,
                             "repeaty": true,
                             "width": 128,
@@ -110,354 +273,11 @@ export const ThreeData = {
                         "z": -960
                     },
                     "endDot": {
-                        "x": -10,
+                        "x": 2160,
                         "y": 120,
                         "z": -960
                     },
                     children: [
-                        {
-                            op: '-',
-                            show: true,
-                            uuid: "",
-                            name: 'windowHole',
-                            objType: 'windowHole',
-                            depth: 20,
-                            height: 160,
-                            startDot: {
-                                x: 2140,
-                                y: 130,
-                                z: -960
-                            },
-                            endDot: {
-                                x: 1840,
-                                y: 130,
-                                z: -960
-                            }
-                        },
-                        {
-                            show: true,
-                            name: 'windowCaseBottom',
-                            uuid: "",
-                            objType: 'cube',
-                            depth: 30,
-                            height: 5,
-                            "skin": {
-                                "skin_behind": {
-                                    "skinColor": 16777215,
-                                    "imgUrl": "metal.png",
-                                    "repeatx": true,
-                                    "repeaty": true,
-                                    "width": 128,
-                                    "height": 128
-                                },
-                                "skin_fore": {
-                                    "skinColor": 16777215,
-                                    "imgUrl": "metal.png",
-                                    "repeatx": true,
-                                    "repeaty": true,
-                                    "width": 128,
-                                    "height": 128
-                                },
-                                "skin_left": {
-                                    "skinColor": 16777215,
-                                    "imgUrl": "metal.png",
-                                    "repeatx": true,
-                                    "repeaty": true,
-                                    "width": 128,
-                                    "height": 128
-                                },
-                                "skin_right": {
-                                    "skinColor": 16777215,
-                                    "imgUrl": "wall2.png",
-                                    "repeatx": true,
-                                    "repeaty": true,
-                                    "width": 128,
-                                    "height": 128
-                                },
-                                "skin_up": {
-                                    "skinColor": 16777215,
-                                    "imgUrl": "metal.png",
-                                    "repeatx": true,
-                                    "repeaty": true,
-                                    "width": 128,
-                                    "height": 128
-                                }
-                            },
-                            startDot: {
-                                x: 2140,
-                                y: 50,
-                                z: -960
-                            },
-                            endDot: {
-                                x: 1840,
-                                y: 50,
-                                z: -960
-                            },
-                            skinColor:0x0a0707,
-                        },
-                        {
-                            show: true,
-                            name: 'windowCaseTop',
-                            uuid: "",
-                            objType: 'cube',
-                            depth: 30,
-                            height: 5,
-                            "skin": {
-                                "skin_behind": {
-                                    "skinColor": 16777215,
-                                    "imgUrl": "metal.png",
-                                    "repeatx": true,
-                                    "repeaty": true,
-                                    "width": 128,
-                                    "height": 128
-                                },
-                                "skin_fore": {
-                                    "skinColor": 16777215,
-                                    "imgUrl": "metal.png",
-                                    "repeatx": true,
-                                    "repeaty": true,
-                                    "width": 128,
-                                    "height": 128
-                                },
-                                "skin_left": {
-                                    "skinColor": 16777215,
-                                    "imgUrl": "metal.png",
-                                    "repeatx": true,
-                                    "repeaty": true,
-                                    "width": 128,
-                                    "height": 128
-                                },
-                                "skin_right": {
-                                    "skinColor": 16777215,
-                                    "imgUrl": "wall2.png",
-                                    "repeatx": true,
-                                    "repeaty": true,
-                                    "width": 128,
-                                    "height": 128
-                                },
-                                "skin_up": {
-                                    "skinColor": 16777215,
-                                    "imgUrl": "metal.png",
-                                    "repeatx": true,
-                                    "repeaty": true,
-                                    "width": 128,
-                                    "height": 128
-                                }
-                            },
-                            startDot: {
-                                x: 2140,
-                                y: 210,
-                                z: -960
-                            },
-                            endDot: {
-                                x: 1840,
-                                y: 210,
-                                z: -960
-                            },
-                            skinColor:0x0a0707,
-                        },
-                        {
-                            show: true,
-                            name: 'windowCaseRight',
-                            uuid: "",
-                            objType: 'cube',
-                            depth: 30,
-                            height: 160,
-                            startDot: {
-                                x: 2140,
-                                y: 130,
-                                z: -960
-                            },
-                            endDot: {
-                                x: 2135,
-                                y: 130,
-                                z: -960
-                            },
-                            skinColor:0x0a0707,
-                        },
-                        {
-                            show: true,
-                            name: 'windowCaseLeft',
-                            uuid: "",
-                            objType: 'cube',
-                            depth: 30,
-                            height: 160,
-                            startDot: {
-                                x: 1845,
-                                y: 130,
-                                z: -960
-                            },
-                            endDot: {
-                                x: 1840,
-                                y: 130,
-                                z: -960
-                            },
-                            skinColor:0x0a0707,
-                        },
-                        {
-                            show: true,
-                            uuid: "",
-                            name: 'windowGlasses',
-                            objType: 'glasses',
-                            depth: 5,
-                            height: 160,
-                            skin: {
-                                skin_fore: {
-                                    imgUrl: "glass.png",
-                                    transparent: true,
-                                    opacity: 0.15,
-                                    repeatx: true,
-                                    repeaty: true,
-                                },
-                                skin_behind: {
-                                    imgUrl: "glass.png",
-                                    transparent: true,
-                                    opacity: 0.15,
-                                    repeatx: true,
-                                    repeaty: true,
-                                },
-                            },
-                            startDot: {
-                                x: 2140,
-                                y: 130,
-                                z: -960
-                            },
-                            endDot: {
-                                x: 1840,
-                                y: 130,
-                                z: -960
-                            }
-                        },
-                        {
-                            op: '-',
-                            show: true,
-                            uuid: "",
-                            name: 'windowHole',
-                            objType: 'windowHole',
-                            depth: 20,
-                            height: 160,
-                            startDot: {
-                                x: 1780,
-                                y: 130,
-                                z: -960
-                            },
-                            endDot: {
-                                x: 1480,
-                                y: 130,
-                                z: -960
-                            }
-                        },
-                        {
-                            show: true,
-                            name: 'windowCaseBottom',
-                            uuid: "",
-                            objType: 'cube',
-                            depth: 30,
-                            height: 5,
-                            startDot: {
-                                x: 1780,
-                                y: 50,
-                                z: -960
-                            },
-                            endDot: {
-                                x: 1480,
-                                y: 50,
-                                z: -960
-                            },
-                            skinColor:0x0a0707,
-                        },
-                        {
-                            show: true,
-                            name: 'windowCaseBottom',
-                            uuid: "",
-                            objType: 'cube',
-                            depth: 30,
-                            height: 5,
-                            startDot: {
-                                x: 1780,
-                                y: 210,
-                                z: -960
-                            },
-                            endDot: {
-                                x: 1480,
-                                y: 210,
-                                z: -960
-                            },
-                            skinColor:0x0a0707,
-                        },
-                        {
-                            show: true,
-                            name: 'windowCaseBottom',
-                            uuid: "",
-                            objType: 'cube',
-                            depth: 30,
-                            height: 160,
-                            startDot: {
-                                x: 1780,
-                                y: 130,
-                                z: -960
-                            },
-                            endDot: {
-                                x: 1775,
-                                y: 130,
-                                z: -960
-                            },
-                            skinColor:0x0a0707,
-                        },
-                        {
-                            show: true,
-                            name: 'windowCaseBottom',
-                            uuid: "",
-                            objType: 'cube',
-                            depth: 30,
-                            height: 160,
-                            startDot: {
-                                x: 1485,
-                                y: 130,
-                                z: -960
-                            },
-                            endDot: {
-                                x: 1480,
-                                y: 130,
-                                z: -960
-                            },
-                            skinColor:0x0a0707,
-                        },
-                        {
-                            show: true,
-                            uuid: "",
-                            name: 'windowGlasses',
-                            objType: 'glasses',
-                            depth: 5,
-                            height: 160,
-                            skin: {
-                                skin_fore: {
-                                    imgUrl: "glass.png",
-                                    transparent: true,
-                                    opacity: 0.15,
-                                    repeatx: true,
-                                    repeaty: true,
-                                },
-                                skin_behind: {
-                                    imgUrl: "glass.png",
-                                    transparent: true,
-                                    opacity: 0.15,
-                                    repeatx: true,
-                                    repeaty: true,
-                                },
-                            },
-                            startDot: {
-                                x: 1780,
-                                y: 130,
-                                z: -960
-                            },
-                            endDot: {
-                                x: 1480,
-                                y: 130,
-                                z: -960
-                            }
-                        },
-
                         {
                             op: '-',
                             show: true,
@@ -1984,6 +1804,349 @@ export const ThreeData = {
                             op: '-',
                             show: true,
                             uuid: "",
+                            name: 'windowHole',
+                            objType: 'windowHole',
+                            depth: 20,
+                            height: 160,
+                            startDot: {
+                                x: 2140-700,
+                                y: 130,
+                                z: -100
+                            },
+                            endDot: {
+                                x: 1840-700,
+                                y: 130,
+                                z: -100
+                            }
+                        },
+                        {
+                            show: true,
+                            name: 'windowCaseBottom',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 30,
+                            height: 5,
+                            "skin": {
+                                "skin_behind": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "metal.png",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_fore": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "metal.png",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_left": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "metal.png",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_right": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wall2.png",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_up": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "metal.png",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                }
+                            },
+                            startDot: {
+                                x: 2140-700,
+                                y: 50,
+                                z: -100
+                            },
+                            endDot: {
+                                x: 1840-700,
+                                y: 50,
+                                z: -100
+                            },
+                            skinColor:0x0a0707,
+                        },
+                        {
+                            show: true,
+                            name: 'windowCaseTop',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 30,
+                            height: 5,
+                            "skin": {
+                                "skin_behind": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "metal.png",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_fore": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "metal.png",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_left": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "metal.png",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_right": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "wall2.png",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                "skin_up": {
+                                    "skinColor": 16777215,
+                                    "imgUrl": "metal.png",
+                                    "repeatx": true,
+                                    "repeaty": true,
+                                    "width": 128,
+                                    "height": 128
+                                }
+                            },
+                            startDot: {
+                                x: 2140-700,
+                                y: 210,
+                                z: -100
+                            },
+                            endDot: {
+                                x: 1840-700,
+                                y: 210,
+                                z: -100
+                            },
+                            skinColor:0x0a0707,
+                        },
+                        {
+                            show: true,
+                            name: 'windowCaseRight',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 30,
+                            height: 160,
+                            startDot: {
+                                x: 2140-700,
+                                y: 130,
+                                z: -100
+                            },
+                            endDot: {
+                                x: 2135-700,
+                                y: 130,
+                                z: -100
+                            },
+                            skinColor:0x0a0707,
+                        },
+                        {
+                            show: true,
+                            name: 'windowCaseLeft',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 30,
+                            height: 160,
+                            startDot: {
+                                x: 1845-700,
+                                y: 130,
+                                z: -100
+                            },
+                            endDot: {
+                                x: 1840-700,
+                                y: 130,
+                                z: -100
+                            },
+                            skinColor:0x0a0707,
+                        },
+                        {
+                            show: true,
+                            uuid: "",
+                            name: 'windowGlasses',
+                            objType: 'glasses',
+                            depth: 5,
+                            height: 160,
+                            skin: {
+                                skin_fore: {
+                                    imgUrl: "glass.png",
+                                    transparent: true,
+                                    opacity: 0.15,
+                                    repeatx: true,
+                                    repeaty: true,
+                                },
+                                skin_behind: {
+                                    imgUrl: "glass.png",
+                                    transparent: true,
+                                    opacity: 0.15,
+                                    repeatx: true,
+                                    repeaty: true,
+                                },
+                            },
+                            startDot: {
+                                x: 2140-700,
+                                y: 130,
+                                z: -100
+                            },
+                            endDot: {
+                                x: 1840-700,
+                                y: 130,
+                                z: -100
+                            }
+                        },
+                        {
+                            op: '-',
+                            show: true,
+                            uuid: "",
+                            name: 'windowHole',
+                            objType: 'windowHole',
+                            depth: 20,
+                            height: 160,
+                            startDot: {
+                                x: 1780-700,
+                                y: 130,
+                                z: -100
+                            },
+                            endDot: {
+                                x: 1480-700,
+                                y: 130,
+                                z: -100
+                            }
+                        },
+                        {
+                            show: true,
+                            name: 'windowCaseBottom',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 30,
+                            height: 5,
+                            startDot: {
+                                x: 1780-700,
+                                y: 50,
+                                z: -100
+                            },
+                            endDot: {
+                                x: 1480-700,
+                                y: 50,
+                                z: -100
+                            },
+                            skinColor:0x0a0707,
+                        },
+                        {
+                            show: true,
+                            name: 'windowCaseBottom',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 30,
+                            height: 5,
+                            startDot: {
+                                x: 1780-700,
+                                y: 210,
+                                z: -100
+                            },
+                            endDot: {
+                                x: 1480-700,
+                                y: 210,
+                                z: -100
+                            },
+                            skinColor:0x0a0707,
+                        },
+                        {
+                            show: true,
+                            name: 'windowCaseBottom',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 30,
+                            height: 160,
+                            startDot: {
+                                x: 1780-700,
+                                y: 130,
+                                z: -100
+                            },
+                            endDot: {
+                                x: 1775-700,
+                                y: 130,
+                                z: -100
+                            },
+                            skinColor:0x0a0707,
+                        },
+                        {
+                            show: true,
+                            name: 'windowCaseBottom',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 30,
+                            height: 160,
+                            startDot: {
+                                x: 1485-700,
+                                y: 130,
+                                z: -100
+                            },
+                            endDot: {
+                                x: 1480-700,
+                                y: 130,
+                                z: -100
+                            },
+                            skinColor:0x0a0707,
+                        },
+                        {
+                            show: true,
+                            uuid: "",
+                            name: 'windowGlasses',
+                            objType: 'glasses',
+                            depth: 5,
+                            height: 160,
+                            skin: {
+                                skin_fore: {
+                                    imgUrl: "glass.png",
+                                    transparent: true,
+                                    opacity: 0.15,
+                                    repeatx: true,
+                                    repeaty: true,
+                                },
+                                skin_behind: {
+                                    imgUrl: "glass.png",
+                                    transparent: true,
+                                    opacity: 0.15,
+                                    repeatx: true,
+                                    repeaty: true,
+                                },
+                            },
+                            startDot: {
+                                x: 1780-700,
+                                y: 130,
+                                z: -100
+                            },
+                            endDot: {
+                                x: 1480-700,
+                                y: 130,
+                                z: -100
+                            }
+                        },
+
+                        {
+                            op: '-',
+                            show: true,
+                            uuid: "",
                             name: 'doorhole',
                             objType: 'doorhole',
                             depth: 30,
@@ -2135,6 +2298,54 @@ export const ThreeData = {
                                 z: -100
                             },
                         },
+                        {
+                            show: true,
+                            uuid: "",
+                            name: 'windowTV',
+                            objType: 'cube',
+                            depth: 10,
+                            height: 120,
+                            skinColor: 0x111111,
+                            skin: {
+                                skin_fore: {
+                                    imgUrl: "tv.jpg",
+                                },
+                            },
+                            startDot: {
+                                x: 1080+700,
+                                y: 130,
+                                z: -90
+                            },
+                            endDot: {
+                                x: 880+700,
+                                y: 130,
+                                z: -90
+                            }
+                        },
+                        {
+                            show: true,
+                            uuid: "",
+                            name: 'windowTV',
+                            objType: 'cube',
+                            depth: 10,
+                            height: 120,
+                            skinColor: 0x111111,
+                            skin: {
+                                skin_fore: {
+                                    imgUrl: "tv.jpg",
+                                },
+                            },
+                            startDot: {
+                                x: 1080+950,
+                                y: 130,
+                                z: -90
+                            },
+                            endDot: {
+                                x: 880+950,
+                                y: 130,
+                                z: -90
+                            }
+                        }
                     ]
                 },
                 // 右办公区（技术）右墙
@@ -9498,14 +9709,14 @@ export const ThreeData = {
                         }
                     ],
                     "startDot": {
-                        "x": -1675,
+                        "x": -1655,
                         "y": 120,
-                        "z": -1190
+                        "z": -1381
                     },
                     "endDot": {
-                        "x": 30,
+                        "x": -1410,
                         "y": 120,
-                        "z": -1190
+                        "z": -1381
                     }
                 },
                 // 左总经办右
@@ -11499,6 +11710,50 @@ export const ThreeData = {
         },
 
         {
+            show:true,
+            uuid: "",
+            name: '椅子',
+            objType: 'objPlant',
+            // objType: 'objPlant',
+            objHandle:[{ direction: 'arb', handleScale: [1,1,1]}],
+            children: [
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:0.5*Math.PI},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -852,
+                    y: 0,
+                    z: 735,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:0.5*Math.PI},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: -750,
+                    y: 0,
+                    z: 482,
+                },
+
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:0.5*Math.PI},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 29,
+                    y: 0,
+                    z: 197,
+                },
+                {
+                    name:"plant-right",
+                    objHandle: [{ direction: 'y',degree:0.5*Math.PI},{ direction: 'arb', handleScale: [0.1,0.1,0.1]}],
+                    uuid:"",
+                    x: 20,
+                    y: 0,
+                    z: 441,
+                },
+            ]
+        },
+
+        {
             "show": true,
             "uuid": "",
             "name": "aircondition",
@@ -11792,67 +12047,893 @@ export const ThreeData = {
                 },
             }
         },
+        //
+        // {
+        //     "show": true,
+        //     "uuid": "",
+        //     "name": "左总经理室1",
+        //     "objType": "switch",
+        //     "objHandle": [
+        //         {
+        //             "direction": "y",
+        //             "degree": -Math.PI* 6/40
+        //         }
+        //     ],
+        //     "x": -1016,
+        //     "y": 150,
+        //     "z": 725,
+        //     "style": {
+        //         "skinColor": 0xf8ede2
+        //     },
+        //     data: {
+        //         contextMenu: true,
+        //         click: true,
+        //         menuContent: [
+        //             {
+        //                 name: '开灯',
+        //                 click: 1,  //1：请求，2：跳转
+        //                 target: '_black', //跳转方式
+        //                 url: '/iclock/light_state',
+        //                 sendMethod: 0, // 0：get，1：post
+        //                 params: {
+        //                     test: 1
+        //                 }
+        //             }
+        //         ],
+        //         clickContent: {
+        //             click: 2, //1：请求，2：跳转
+        //             target: '_black', //跳转方式
+        //             url: '/iclock/light_state',
+        //             sendMethod: 0, // 0：get，1：post
+        //             params: {
+        //                 test: 1
+        //             }
+        //         }
+        //
+        //     }
+        // },
+        // {
+        //     "show": true,
+        //     "uuid": "",
+        //     "name": "左门",
+        //     "objType": "switch",
+        //     "objHandle": [
+        //         {
+        //             "direction": "y",
+        //             "degree": Math.PI* 14/40
+        //         }
+        //     ],
+        //     "x": -764,
+        //     "y": 150,
+        //     "z": 378,
+        //     "style": {
+        //         "skinColor": 0xf8ede2
+        //     },
+        //     data: {
+        //         contextMenu: true,
+        //         click: true,
+        //         menuContent: [
+        //             {
+        //                 name: '开灯',
+        //                 click: 1,  //1：请求，2：跳转
+        //                 target: '_black', //跳转方式
+        //                 url: '/iclock/light_state',
+        //                 sendMethod: 0, // 0：get，1：post
+        //                 params: {
+        //                     test: 1
+        //                 }
+        //             }
+        //         ],
+        //         clickContent: {
+        //             click: 2, //1：请求，2：跳转
+        //             target: '_black', //跳转方式
+        //             url: '/iclock/light_state',
+        //             sendMethod: 0, // 0：get，1：post
+        //             params: {
+        //                 test: 1
+        //             }
+        //         }
+        //
+        //     }
+        // },
+        // {
+        //     "show": true,
+        //     "uuid": "",
+        //     "name": "601门灯",
+        //     "objType": "switch",
+        //     "objHandle": [
+        //         {
+        //             "direction": "y",
+        //             "degree": -Math.PI* 26/40
+        //         }
+        //     ],
+        //     "x": -741,
+        //     "y": 150,
+        //     "z": 257,
+        //     "style": {
+        //         "skinColor": 0xf8ede2
+        //     },
+        //     data: {
+        //         contextMenu: true,
+        //         click: true,
+        //         menuContent: [
+        //             {
+        //                 name: '开灯',
+        //                 click: 1,  //1：请求，2：跳转
+        //                 target: '_black', //跳转方式
+        //                 url: '/iclock/light_state',
+        //                 sendMethod: 0, // 0：get，1：post
+        //                 params: {
+        //                     test: 1
+        //                 }
+        //             }
+        //         ],
+        //         clickContent: {
+        //             click: 2, //1：请求，2：跳转
+        //             target: '_black', //跳转方式
+        //             url: '/iclock/light_state',
+        //             sendMethod: 0, // 0：get，1：post
+        //             params: {
+        //                 test: 1
+        //             }
+        //         }
+        //
+        //     }
+        // },
+        // {
+        //     "show": true,
+        //     "uuid": "",
+        //     "name": "601技术",
+        //     "objType": "switch",
+        //     "objHandle": [
+        //         {
+        //             "direction": "y",
+        //             "degree": -Math.PI* 2/3
+        //         }
+        //     ],
+        //     "x": -1274,
+        //     "y": 150,
+        //     "z": 693,
+        //     "style": {
+        //         "skinColor": 0xf8ede2
+        //     },
+        //     data: {
+        //         contextMenu: true,
+        //         click: true,
+        //         menuContent: [
+        //             {
+        //                 name: '开灯',
+        //                 click: 1,  //1：请求，2：跳转
+        //                 target: '_black', //跳转方式
+        //                 url: '/iclock/light_state',
+        //                 sendMethod: 0, // 0：get，1：post
+        //                 params: {
+        //                     test: 1
+        //                 }
+        //             }
+        //         ],
+        //         clickContent: {
+        //             click: 2, //1：请求，2：跳转
+        //             target: '_black', //跳转方式
+        //             url: '/iclock/light_state',
+        //             sendMethod: 0, // 0：get，1：post
+        //             params: {
+        //                 test: 1
+        //             }
+        //         }
+        //
+        //     }
+        // },
+        // {
+        //     "show": true,
+        //     "uuid": "",
+        //     "name": "601会议室",
+        //     "objType": "switch",
+        //     "objHandle": [
+        //         {
+        //             "direction": "y",
+        //             "degree": -Math.PI* 1/20
+        //         }
+        //     ],
+        //     "x": -1980,
+        //     "y": 150,
+        //     "z": -125,
+        //     "style": {
+        //         "skinColor": 0xf8ede2
+        //     },
+        //     data: {
+        //         contextMenu: true,
+        //         click: true,
+        //         menuContent: [
+        //             {
+        //                 name: '开灯',
+        //                 click: 1,  //1：请求，2：跳转
+        //                 target: '_black', //跳转方式
+        //                 url: '/iclock/light_state',
+        //                 sendMethod: 0, // 0：get，1：post
+        //                 params: {
+        //                     test: 1
+        //                 }
+        //             }
+        //         ],
+        //         clickContent: {
+        //             click: 2, //1：请求，2：跳转
+        //             target: '_black', //跳转方式
+        //             url: '/iclock/light_state',
+        //             sendMethod: 0, // 0：get，1：post
+        //             params: {
+        //                 test: 1
+        //             }
+        //         }
+        //
+        //     }
+        // },
+        // {
+        //     "show": true,
+        //     "uuid": "",
+        //     "name": "601销售1",
+        //     "objType": "switch",
+        //     "objHandle": [
+        //         {
+        //             "direction": "y",
+        //             "degree": -Math.PI* 11/20
+        //         }
+        //     ],
+        //     "x": -1581,
+        //     "y": 150,
+        //     "z": -300,
+        //     "style": {
+        //         "skinColor": 0xf8ede2
+        //     },
+        //     data: {
+        //         contextMenu: true,
+        //         click: true,
+        //         menuContent: [
+        //             {
+        //                 name: '开灯',
+        //                 click: 1,  //1：请求，2：跳转
+        //                 target: '_black', //跳转方式
+        //                 url: '/iclock/light_state',
+        //                 sendMethod: 0, // 0：get，1：post
+        //                 params: {
+        //                     test: 1
+        //                 }
+        //             }
+        //         ],
+        //         clickContent: {
+        //             click: 2, //1：请求，2：跳转
+        //             target: '_black', //跳转方式
+        //             url: '/iclock/light_state',
+        //             sendMethod: 0, // 0：get，1：post
+        //             params: {
+        //                 test: 1
+        //             }
+        //         }
+        //
+        //     }
+        // },
+        // {
+        //     "show": true,
+        //     "uuid": "",
+        //     "name": "601销售2",
+        //     "objType": "switch",
+        //     "objHandle": [
+        //         {
+        //             "direction": "y",
+        //             "degree": -Math.PI* 1/20
+        //         }
+        //     ],
+        //     "x": -1681,
+        //     "y": 150,
+        //     "z": -751,
+        //     "style": {
+        //         "skinColor": 0xf8ede2
+        //     },
+        //     data: {
+        //         contextMenu: true,
+        //         click: true,
+        //         menuContent: [
+        //             {
+        //                 name: '开灯',
+        //                 click: 1,  //1：请求，2：跳转
+        //                 target: '_black', //跳转方式
+        //                 url: '/iclock/light_state',
+        //                 sendMethod: 0, // 0：get，1：post
+        //                 params: {
+        //                     test: 1
+        //                 }
+        //             }
+        //         ],
+        //         clickContent: {
+        //             click: 2, //1：请求，2：跳转
+        //             target: '_black', //跳转方式
+        //             url: '/iclock/light_state',
+        //             sendMethod: 0, // 0：get，1：post
+        //             params: {
+        //                 test: 1
+        //             }
+        //         }
+        //
+        //     }
+        // },
+        // {
+        //     "show": true,
+        //     "uuid": "",
+        //     "name": "601总经理室2",
+        //     "objType": "switch",
+        //     "objHandle": [
+        //         {
+        //             "direction": "y",
+        //             "degree": -Math.PI* 21/20
+        //         }
+        //     ],
+        //     "x": -1674,
+        //     "y": 150,
+        //     "z": -770,
+        //     "style": {
+        //         "skinColor": 0xf8ede2
+        //     },
+        //     data: {
+        //         contextMenu: true,
+        //         click: true,
+        //         menuContent: [
+        //             {
+        //                 name: '开灯',
+        //                 click: 1,  //1：请求，2：跳转
+        //                 target: '_black', //跳转方式
+        //                 url: '/iclock/light_state',
+        //                 sendMethod: 0, // 0：get，1：post
+        //                 params: {
+        //                     test: 1
+        //                 }
+        //             }
+        //         ],
+        //         clickContent: {
+        //             click: 2, //1：请求，2：跳转
+        //             target: '_black', //跳转方式
+        //             url: '/iclock/light_state',
+        //             sendMethod: 0, // 0：get，1：post
+        //             params: {
+        //                 test: 1
+        //             }
+        //         }
+        //
+        //     }
+        // }
+
+        {
+            "show": false,
+            "name": "门禁",
+            "objType": "switchSprite",
+            "x": -1288,
+            "y": 200,
+            "z": 224,
+            "data": {
+                "url": "/iclock/access_control_data",
+                "sendMethod": 'get',
+                "params": {
+                    test:0
+                },
+                switchList: [
+                    {
+                        name: '601门禁',
+                        url: '/iclock/access_control_data',
+                        "sendMethod": 'get',
+                        "params": {
+                            SN:'CJS3202560117',
+                            access: '开'
+                        },
+                        type: 'button'
+                    },
+                    {
+                        name: '602门禁',
+                        url: '/iclock/access_control_data',
+                        "sendMethod": 'get',
+                        "params": {
+                            SN:'CJS3220960071',
+                            access: '开'
+                        },
+                        type: 'button'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "601门厅灯",
+            "objType": "switchSprite",
+            "x": -1288,
+            "y": 200,
+            "z": 224,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    'entity_id':'switch.dhkg01_cloud_521737'
+                },
+                switchList: [
+                    {
+                        name: '灯',
+                        id:'switch.dhkg01_cloud_521737',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg01_cloud_521737'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "601技术",
+            "objType": "switchSprite",
+            "x": -1603,
+            "y": 200,
+            "z": 496,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg02_cloud_979243,switch.dhkg02_cloud_979243_switch_2'
+                },
+                switchList: [
+                    {
+                        name: '灯1',
+                        id: 'switch.dhkg02_cloud_979243',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_979243'
+                        },
+                        type: 'switch'
+                    },
+                    {
+                        name: '灯2',
+                        id: 'switch.dhkg02_cloud_979243_switch_2',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_979243_switch_2'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "601会议室",
+            "objType": "switchSprite",
+            "x": -2119,
+            "y": 200,
+            "z": 170,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg01_cloud_546359'
+                },
+                switchList: [
+                    {
+                        name: '灯',
+                        id: 'switch.dhkg01_cloud_546359',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg01_cloud_546359'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "601销售",
+            "objType": "switchSprite",
+            "x": -1937,
+            "y": 200,
+            "z": -356,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg01_cloud_665820'
+                },
+                switchList: [
+                    {
+                        name: '灯',
+                        id: 'switch.dhkg01_cloud_665820',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg01_cloud_665820'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "601销售",
+            "objType": "switchSprite",
+            "x": -1918,
+            "y": 200,
+            "z": -653,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg01_cloud_668031'
+                },
+                switchList: [
+                    {
+                        name: '灯',
+                        id: 'switch.dhkg01_cloud_668031',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg01_cloud_668031'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "601总经理室",
+            "objType": "switchSprite",
+            "x": -1613,
+            "y": 200,
+            "z": -1147,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg02_cloud_327127,switch.dhkg02_cloud_327127_switch_2'
+                },
+                switchList: [
+                    {
+                        name: '灯1',
+                        id: 'switch.dhkg02_cloud_327127',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_327127'
+                        },
+                        type: 'switch'
+                    },
+                    {
+                        name: '灯2',
+                        id: 'switch.dhkg02_cloud_327127_switch_2',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_327127_switch_2'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "总经理室",
+            "objType": "switchSprite",
+            "x": -1116,
+            "y": 200,
+            "z": 897,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg02_cloud_977998,switch.dhkg02_cloud_977998_switch_2'
+                },
+                switchList: [
+                    {
+                        name: '灯1',
+                        id: 'switch.dhkg02_cloud_977998',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_977998'
+                        },
+                        type: 'switch'
+                    },
+                    {
+                        name: '灯2',
+                        id: 'switch.dhkg02_cloud_977998_switch_2',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_977998_switch_2'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
 
         {
             "show": true,
-            "uuid": "",
-            "name": "总经理室1",
-            "objType": "switch",
-            "rotation": [
-                {
-                    "direction": "y",
-                    "degree": Math.PI* 15/40
-                }
-            ],
-            "x": -1016,
-            "y": 150,
-            "z": 725,
-            "style": {
-                "skinColor": 16448250,
-                "skin": {
-                    "skin_behind": {
-                        "skinColor": 16777215,
-                        "imgUrl": "wood.jpg",
-                        "repeatx": true,
-                        "repeaty": true,
-                        "width": 1280,
-                        "height": 1280
-                    },
-                    "skin_fore": {
-                        "skinColor": 16777215,
-                        "imgUrl": "wood.jpg",
-                        "repeatx": true,
-                        "repeaty": true,
-                        "width": 1280,
-                        "height": 1280
-                    },
-                    "skin_left": {
-                        "skinColor": 16777215,
-                        "imgUrl": "wood.jpg",
-                        "repeatx": true,
-                        "repeaty": true,
-                        "width": 1280,
-                        "height": 1280
-                    },
-                    "skin_right": {
-                        "skinColor": 16777215,
-                        "imgUrl": "wood.jpg",
-                        "repeatx": true,
-                        "repeaty": true,
-                        "width": 1280,
-                        "height": 1280
-                    },
-                    "skin_up": {
-                        "skinColor": 16777215,
-                        "imgUrl": "wood.jpg",
-                        "repeatx": true,
-                        "repeaty": true,
-                        "width": 1280,
-                        "height": 1280
-                    }
+            "name": "懂事长室",
+            "objType": "switchSprite",
+            "x": 1857,
+            "y": 200,
+            "z": 995,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg02_cloud_976943,switch.dhkg02_cloud_976943_switch_2'
                 },
+                switchList: [
+                    {
+                        name: '灯1',
+                        id: 'switch.dhkg02_cloud_976943',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_976943'
+                        },
+                        type: 'switch'
+                    },
+                    {
+                        name: '灯2',
+                        id: 'switch.dhkg02_cloud_976943_switch_2',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_976943_switch_2'
+                        },
+                        type: 'switch'
+                    }
+                ]
             }
-        }
+        },
+        {
+            "show": true,
+            "name": "602会议室",
+            "objType": "switchSprite",
+            "x": 1101,
+            "y": 200,
+            "z": 1038,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg05_cloud_834293,switch.dhkg05_cloud_834293_switch_2,switch.dhkg05_cloud_834293_switch_3'
+                },
+                switchList: [
+                    {
+                        name: '灯1',
+                        id: 'switch.dhkg05_cloud_834293',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg05_cloud_834293'
+                        },
+                        type: 'switch'
+                    },
+                    {
+                        name: '灯2',
+                        id: 'switch.dhkg05_cloud_834293_switch_2',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg05_cloud_834293_switch_2'
+                        },
+                        type: 'switch'
+                    },
+                    {
+                        name: '灯3',
+                        id: 'switch.dhkg05_cloud_834293_switch_3',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg05_cloud_834293_switch_3'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "602财务室",
+            "objType": "switchSprite",
+            "x": 2301,
+            "y": 200,
+            "z": 1011,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg01_cloud_649160'
+                },
+                switchList: [
+                    {
+                        name: '灯',
+                        id: 'switch.dhkg01_cloud_649160',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg01_cloud_649160'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "602综合部",
+            "objType": "switchSprite",
+            "x": 496,
+            "y": 200,
+            "z": 985,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg01_cloud_547665'
+                },
+                switchList: [
+                    {
+                        name: '灯',
+                        id: 'switch.dhkg01_cloud_547665',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg01_cloud_547665'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "602销售部",
+            "objType": "switchSprite",
+            "x": 60,
+            "y": 200,
+            "z": 1069,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg01_cloud_665214'
+                },
+                switchList: [
+                    {
+                        name: '灯',
+                        id: 'switch.dhkg01_cloud_665214',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg01_cloud_665214'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "602洽谈室",
+            "objType": "switchSprite",
+            "x": 564,
+            "y": 200,
+            "z": 340,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg01_cloud_665921'
+                },
+                switchList: [
+                    {
+                        name: '灯',
+                        id: 'switch.dhkg01_cloud_665921',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg01_cloud_665921'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "602技术部",
+            "objType": "switchSprite",
+            "x": 1460,
+            "y": 200,
+            "z": 185,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg05_cloud_104476,switch.dhkg05_cloud_104476_switch_2,switch.dhkg05_cloud_104476_switch_3'
+                },
+                switchList: [
+                    {
+                        name: '灯1',
+                        id: 'switch.dhkg05_cloud_104476',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg05_cloud_104476'
+                        },
+                        type: 'switch'
+                    },
+                    {
+                        name: '灯2',
+                        id: 'switch.dhkg05_cloud_104476_switch_2',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg05_cloud_104476_switch_2'
+                        },
+                        type: 'switch'
+                    },
+                    {
+                        name: '灯3',
+                        id: 'switch.dhkg05_cloud_104476_switch_3',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg05_cloud_104476_switch_3'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
+        {
+            "show": true,
+            "name": "602门厅",
+            "objType": "switchSprite",
+            "x": 185,
+            "y": 200,
+            "z": 524,
+            "data": {
+                "url": "/iclock/light_state",
+                "sendMethod": 'get',
+                "params": {
+                    entity_id:'switch.dhkg02_cloud_859450,switch.dhkg02_cloud_859450_switch_2'
+                },
+                switchList: [
+                    {
+                        name: '灯1',
+                        id: 'switch.dhkg02_cloud_859450',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_859450'
+                        },
+                        type: 'switch'
+                    },
+                    {
+                        name: '灯2',
+                        id: 'switch.dhkg02_cloud_859450_switch_2',
+                        url: '/iclock/light',
+                        "sendMethod": 'get',
+                        "params": {
+                            entity_id:'switch.dhkg02_cloud_859450_switch_2'
+                        },
+                        type: 'switch'
+                    }
+                ]
+            }
+        },
 
     ]
 }
