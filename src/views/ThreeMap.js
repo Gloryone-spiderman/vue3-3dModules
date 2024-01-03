@@ -1826,74 +1826,157 @@ export default class ThreeMap {
     }
 
     /* 创建字体精灵 */
-    makeTextSprite(message, parameters) {
-
-        if ( parameters === undefined ) parameters = {};
-
-        var fontface = parameters.hasOwnProperty("fontface") ?
-            parameters["fontface"] : "Arial";
+    // makeTextSprite(message, parameters) {
+    //
+    //     if ( parameters === undefined ) parameters = {};
+    //
+    //     var fontface = parameters.hasOwnProperty("fontface") ?
+    //         parameters["fontface"] : "Arial";
+    //
+    //     /* 字体大小 */
+    //     var fontsize = parameters.hasOwnProperty("fontsize") ?
+    //         parameters["fontsize"] : 20;
+    //
+    //     /* 边框厚度 */
+    //     var borderThickness = parameters.hasOwnProperty("borderThickness") ?
+    //         parameters["borderThickness"] : 4;
+    //
+    //     /* 边框颜色 */
+    //     var borderColor = parameters.hasOwnProperty("borderColor") ?
+    //         parameters["borderColor"] : { r:0, g:0, b:0, a:1.0 };
+    //
+    //     /* 背景颜色 */
+    //     var backgroundColor = parameters.hasOwnProperty("backgroundColor") ?
+    //         parameters["backgroundColor"] : { r: 97, g: 139, b: 249, a: 1 };
+    //
+    //     /* 创建画布 */
+    //     var canvas = document.createElement('canvas');
+    //     var context = canvas.getContext('2d');
+    //
+    //     /* 字体加粗 */
+    //     context.font = fontsize + "px " + fontface;
+    //
+    //     /* 获取文字的大小数据，高度取决于文字的大小 */
+    //     var metrics = context.measureText( message );
+    //     var textWidth = metrics.width;
+    //
+    //     /* 背景颜色 */
+    //     context.fillStyle   = "rgba(" + backgroundColor.r + "," + backgroundColor.g + ","
+    //         + backgroundColor.b + "," + backgroundColor.a + ")";
+    //
+    //     /* 边框的颜色 */
+    //     context.strokeStyle = "rgba(" + borderColor.r + "," + borderColor.g + ","
+    //         + borderColor.b + "," + borderColor.a + ")";
+    //     context.lineWidth = borderThickness;
+    //
+    //     /* 绘制圆角矩形 */
+    //     this.roundRect(context, borderThickness/2, borderThickness/2, textWidth + borderThickness, fontsize * 1.4 + borderThickness, 6);
+    //
+    //     /* 字体颜色 */
+    //     context.fillStyle = "rgba(0, 0, 0, 1.0)";
+    //     context.fillText( message, borderThickness, fontsize + borderThickness);
+    //
+    //     /* 画布内容用于纹理贴图 */
+    //     var texture = new THREE.Texture(canvas);
+    //     texture.needsUpdate = true;
+    //
+    //     var spriteMaterial = new THREE.SpriteMaterial({ map: texture } );
+    //     var sprite = new THREE.Sprite( spriteMaterial );
+    //
+    //     /* 缩放比例 */
+    //     sprite.scale.set(10,5,0);
+    //
+    //     return sprite;
+    // }
+    makeTexture (data) {
+        const fontface = 'Arial'
 
         /* 字体大小 */
-        var fontsize = parameters.hasOwnProperty("fontsize") ?
-            parameters["fontsize"] : 20;
+        const fontsize = 40
 
         /* 边框厚度 */
-        var borderThickness = parameters.hasOwnProperty("borderThickness") ?
-            parameters["borderThickness"] : 4;
+        const borderThickness = 4
 
         /* 边框颜色 */
-        var borderColor = parameters.hasOwnProperty("borderColor") ?
-            parameters["borderColor"] : { r:0, g:0, b:0, a:1.0 };
+        const borderColor = { r: 0, g: 0, b: 0, a: 1.0 }
 
         /* 背景颜色 */
-        var backgroundColor = parameters.hasOwnProperty("backgroundColor") ?
-            parameters["backgroundColor"] : { r:255, g:255, b:255, a:1.0 };
+        // const backgroundColor = { r: 97, g: 139, b: 249, a: 1 }
+        const backgroundColor = { r: 255, g: 0, b: 0, a: 1 }
 
         /* 创建画布 */
-        var canvas = document.createElement('canvas');
-        var context = canvas.getContext('2d');
+        const canvas = document.createElement('canvas')
+        const context = canvas.getContext('2d')
 
         /* 字体加粗 */
-        context.font = fontsize + "px " + fontface;
+        context.font = fontsize + 'px ' + fontface
 
         /* 获取文字的大小数据，高度取决于文字的大小 */
-        var metrics = context.measureText( message );
-        var textWidth = metrics.width;
+        const metrics = []
+        data.forEach(ele => {
+            metrics.push(context.measureText((ele.name ? ele.name + ': ' : '') + ele.value))
+            // metrics.push(context.measureText('温度：45℃'))
+        })
+
+        let textWidth = metrics[0].width
+        metrics.forEach(ele => {
+            if (ele.width > textWidth) {
+                textWidth = ele.width
+            }
+        })
 
         /* 背景颜色 */
-        context.fillStyle   = "rgba(" + backgroundColor.r + "," + backgroundColor.g + ","
-            + backgroundColor.b + "," + backgroundColor.a + ")";
+        context.fillStyle = data[0].background || 'rgba(' + backgroundColor.r + ',' + backgroundColor.g + ',' +
+            backgroundColor.b + ',' + backgroundColor.a + ')'
 
         /* 边框的颜色 */
-        context.strokeStyle = "rgba(" + borderColor.r + "," + borderColor.g + ","
-            + borderColor.b + "," + borderColor.a + ")";
-        context.lineWidth = borderThickness;
+        context.strokeStyle = 'rgba(' + borderColor.r + ',' + borderColor.g + ',' +
+            borderColor.b + ',' + borderColor.a + ')'
+        context.lineWidth = borderThickness
 
         /* 绘制圆角矩形 */
-        this.roundRect(context, borderThickness/2, borderThickness/2, textWidth + borderThickness, fontsize * 1.4 + borderThickness, 6);
+        this.roundRect(context, borderThickness / 2, borderThickness / 2, textWidth * 1.2, (fontsize + 10) * (metrics.length + 0.2) + borderThickness * metrics.length, 6)
 
         /* 字体颜色 */
-        context.fillStyle = "rgba(0, 0, 0, 1.0)";
-        context.fillText( message, borderThickness, fontsize + borderThickness);
+        canvas.style.letterSpacing = '5px'
+        for (let i = 0; i < data.length; i++) {
+            // context.fillStyle = data[i].color
+            // context.fillStyle = data[i].color || '#fff'
+            context.fillStyle = '#000'
+            let text = data[i].value
+            if (data[i].name) {
+                text = data[i].name + ':' + text
+            }
+            context.fillText(' ' + text + ' ', borderThickness, fontsize * (i + 1) + borderThickness)
+        }
 
         /* 画布内容用于纹理贴图 */
-        var texture = new THREE.Texture(canvas);
-        texture.needsUpdate = true;
+        const texture = new THREE.Texture(canvas)
+        texture.needsUpdate = true
 
-        var spriteMaterial = new THREE.SpriteMaterial({ map: texture } );
-        var sprite = new THREE.Sprite( spriteMaterial );
-
-        /* 缩放比例 */
-        sprite.scale.set(10,5,0);
-
-        return sprite;
+        return texture
     }
 
     createSprite(obj) {
-        let sprite = this.makeTextSprite(' 温度：' + 12 + '℃ 湿度：' + 12% + ' ')
+        // let sprite = this.makeTextSprite(' 温度：' + 12 + '℃ 湿度：' + 12% + ' ')
+        const texture = this.makeTexture([
+            {
+                "name": "湿度",
+                "value": "24.15%"
+            },
+                {
+                    "name": "温度",
+                    "value": "29.02°C"
+                }
+            ])
+        const spriteMaterial = new THREE.SpriteMaterial({ map: texture })
+        const sprite = new THREE.Sprite(spriteMaterial)
         sprite.position.set(obj.x + 50,obj.y+24,obj.z-20);
+        // const geometry = new THREE.PlaneGeometry(300, 300, 1, 1);
+        // sprite.geometry = geometry
         sprite.scale.set(300, 100,1); // 控制精灵大小，比如可视化中精灵大小表征数据大小 只需要设置x、y两个分量就可以
         sprite.data=obj.data; //告警等级默认给1，给最低告警
+
         sprite.name="spriteAlarm";
         sprite.visible=true;
         this.addObject(sprite);

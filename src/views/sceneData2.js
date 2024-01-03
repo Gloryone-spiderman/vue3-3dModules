@@ -1,1753 +1,403 @@
-import el from "element-ui/src/locale/lang/el";
+/*
+作者:Mr.Xie
+创建时间:2020年05月29日
+功能描述:3D机房封装
+*/
 
-export const ThreeData = {
-    "objects": [
+export const ThreeData={
+    objects: [
+        //地板
         {
-            "show": true,
-            "uuid": "",
-            "name": "floor",
-            "objType": "cube",
-            "width": 3000,
-            "depth": 2500,
-            "height": 10,
-            "style": {
-                "skinColor": 7250357,
-                "skin": {
-                    "skin_up": {
-                        "imgUrl": "floor.jpg",
-                        "repeatx": true,
-                        "repeaty": true,
-                        "width": 128,
-                        "height": 128
-                    }
+            show: true,
+            uuid: "",
+            name: 'floor',
+            objType: 'cube',
+            width: 2000,
+            depth: 1000,
+            height: 10,
+            style: {
+                skinColor: 0x6EA1B5,
+                skin: {
+                    skin_up: {
+                        imgUrl: "floor.jpg",
+                        repeatx: true,
+                        repeaty: true,
+                        width: 128,
+                        height: 128
+                    },
                 }
             }
         },
+        //墙体
         {
-            "show": true,
-            "uuid": "",
-            "name": "wall",
-            "objType": "wall",
-            "depth": 20,
-            "width": 100,
-            "height": 240,
-            "style": {
-                "skinColor": 16777215
+            show: true,
+            uuid: "",
+            name: 'wall',
+            objType: 'wall',
+            depth: 20,
+            width: 100, //根据实际的宽度来的
+            height: 240,
+            style:{
+                skinColor: 0xb0cee0,
             },
-            "wallData": [
-                // 钢瓶间
-                // 下
-                {
-                    "uuid": "",
-                    "name": "wall1",
-                    "skin": {
-                        "skin_behind": {
-                            "skinColor": 16777215,
-                            "repeatx": true,
-                            "repeaty": true,
-                            "width": 128,
-                            "height": 128
+            wallData: [
+                {//前面墙
+                    uuid: "",
+                    name: 'wall1',
+                    skin: {
+                        skin_behind: {
+                            skinColor: 0xb0cee0,
+                            imgUrl: "wall.png",
+                            repeatx: true,
+                            repeaty: true,
+                            width: 128,
+                            height: 128
                         }
                     },
-                    "startDot": {
-                        "x": -1337,
-                        "y": 120,
-                        "z": 1020 - 10
+                    startDot: {
+                        x: -900,
+                        y: 120,
+                        z: 450
                     },
-                    "endDot": {
-                        "x": -677,
-                        "y": 120,
-                        "z": 1020 - 10
-                    }
-                },
-                // 上 （门）
-                {
-                    "uuid": "",
-                    "name": "wall1",
-                    "skin": {
-                        "skin_behind": {
-                            "skinColor": 16777215,
-                            "repeatx": true,
-                            "repeaty": true,
-                            "width": 128,
-                            "height": 128
-                        }
+                    endDot: {
+                        x: 900,
+                        y: 120,
+                        z: 450
                     },
-                    "startDot": {
-                        "x": -1337,
-                        "y": 120,
-                        "z": 380 - 10
-                    },
-                    "endDot": {
-                        "x": -677,
-                        "y": 120,
-                        "z": 380 - 10
-                    },
-                    "children": [
+                    children:[
                         {
-                            "op": "-",
-                            "show": true,
-                            "uuid": "",
-                            "name": "doorhole",
-                            "objType": "doorhole",
-                            "depth": 40,
-                            "height": 210,
-                            "startDot": {
-                                "x": -957,
-                                "y": 90,
-                                "z": 370
+                            op: '-',
+                            show: true,
+                            uuid: "",
+                            name: 'doorhole',
+                            objType: 'doorhole',
+                            depth: 20,
+                            height: 220,
+                            startDot: {
+                                x: 190,
+                                y: 110,
+                                z: 450
                             },
-                            "endDot": {
-                                "x": -857,
-                                "y": 90,
-                                "z": 370
-                            }
+                            endDot: {
+                                x: 410,
+                                y: 110,
+                                z: 450
+                            },
                         },
                         {
-                            "op": "-",
-                            "show": true,
-                            "uuid": "",
-                            "name": "doorhole",
-                            "objType": "doorhole",
-                            "depth": 40,
-                            "height": 210,
-                            "startDot": {
-                                "x": -1037,
-                                "y": 90,
-                                "z": 370
+                            show: true,
+                            uuid: "",
+                            name: 'doorCaseRight',
+                            objType: 'cube',
+                            depth: 24,
+                            height: 220,
+                            startDot: {
+                                x: 405,
+                                y: 110,
+                                z: 450
                             },
-                            "endDot": {
-                                "x": -1137,
-                                "y": 90,
-                                "z": 370
-                            }
-                        }
-                    ]
-                },
-                // 左
-                {
-                    "uuid": "",
-                    "name": "wall3",
-                    "skin": {
-                        "skin_right": {
-                            "skinColor": 16777215,
-                            "repeatx": true,
-                            "repeaty": true,
-                            "width": 128,
-                            "height": 128
-                        }
-                    },
-                    "startDot": {
-                        "x": -1337,
-                        "y": 120,
-                        "z": 1020
-                    },
-                    "endDot": {
-                        "x": -1337,
-                        "y": 120,
-                        "z": -540
-                    },
-                    "children": [
+                            endDot: {
+                                x: 410,
+                                y: 110,
+                                z: 450
+                            },
+                            skinColor:0xc0dee0,
+                        },
                         {
-                            "op": "-",
-                            "show": true,
-                            "uuid": "",
-                            "name": "doorhole",
-                            "objType": "doorhole",
-                            "depth": 40,
-                            "height": 210,
-                            "startDot": {
-                                "x": -1337,
-                                "y": 90,
-                                "z": 160
+                            show: true,
+                            name: 'doorCaseLeft',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 24,
+                            height: 220,
+                            startDot: {
+                                x: 190,
+                                y: 110,
+                                z: 450
                             },
-                            "endDot": {
-                                "x": -1337,
-                                "y": 90,
-                                "z": 340
-                            }
-                        }
+                            endDot: {
+                                x: 195,
+                                y: 110,
+                                z: 450
+                            },
+                            skinColor:0xc0dee0,
+                        },
+                        {
+                            show: true,
+                            name: 'doorCaseTop',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 24,
+                            height: 5,
+                            startDot: {
+                                x: 190,
+                                y: 220,
+                                z: 450
+                            },
+                            endDot: {
+                                x: 410,
+                                y: 220,
+                                z: 450
+                            },
+                            skinColor:0xc0dee0,
+                        },
+                        {
+                            show: true,
+                            name: 'doorCaseBottom',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 24,
+                            height: 5,
+                            startDot: {
+                                x: 195,
+                                y: 5,
+                                z: 450
+                            },
+                            endDot: {
+                                x: 405,
+                                y: 5,
+                                z: 450
+                            },
+                            skinColor:0x5f7071,
+                        },
+                        {
+                            show: true,
+                            name: 'doorControl',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 10,
+                            height: 40,
+                            startDot: {
+                                x: 160,
+                                y: 140,
+                                z: 460
+                            },
+                            endDot: {
+                                x: 180,
+                                y: 140,
+                                z: 460
+                            },
+                            skinColor:0x333333,
+                            skin: {
+                                skin_fore: {
+                                    skinColor: 0x333333,
+                                    width: 20,
+                                    height:40,
+                                    imgUrl: "doorControl.jpg",
+                                },
+                            },
+                        },
+                        {
+                            show: true,
+                            name: 'doorLeft',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 4,
+                            height: 210,
+                            skinColor: 0x51443e,
+                            skin: {
+                                skin_fore: {
+                                    imgUrl: "door_left.png",
+                                    transparent: true,
+                                },
+                                skin_behind: {
+                                    imgUrl: "door_right.png",
+                                    transparent: true,
+                                },
+                            },
+                            startDot: {
+                                x: 195,
+                                y: 112,
+                                z: 450
+                            },
+                            endDot: {
+                                x: 300,
+                                y: 112,
+                                z: 450
+                            },
+                        },
+                        {
+                            show: true,
+                            name: 'doorRight',
+                            uuid: "",
+                            objType: 'cube',
+                            depth: 4,
+                            height: 210,
+                            skinColor: 0x51443e,
+                            skin: {
+                                skin_fore: {
+                                    imgUrl: "door_right.png",
+                                    opacity: 1,
+                                    transparent: true,
+                                },
+                                skin_behind: {
+                                    imgUrl: "door_left.png",
+                                    opacity: 1,
+                                    transparent: true,
+                                },
+                            },
+                            startDot: {
+                                x: 300,
+                                y: 112,
+                                z: 450
+                            },
+                            endDot: {
+                                x: 405,
+                                y: 112,
+                                z: 450
+                            },
+                        },
                     ]
                 },
-                // 右
-                {
-                    "uuid": "",
-                    "name": "wall3",
-                    "skin": {
-                        "skin_right": {
-                            "skinColor": 16777215,
-                            "repeatx": true,
-                            "repeaty": true,
-                            "width": 128,
-                            "height": 128
-                        }
-                    },
-                    "startDot": {
-                        "x": -997,
-                        "y": 120,
-                        "z": 1020
-                    },
-                    "endDot": {
-                        "x": -997,
-                        "y": 120,
-                        "z": 360
-                    }
-                },
+                {//后面墙
+                    uuid: "",
+                    name: 'wall2',
+                    skin: {
+                        skin_fore: {
+                            skinColor: 0xb0cee0,
+                            imgUrl: "wall.png",
+                            repeatx: true,
+                            repeaty: true,
+                            width: 128,
+                            height: 128
+                        },
 
-                // 监控室
-                // 下
-                {
-                    "uuid": "",
-                    "name": "wall1",
-                    "skin": {
-                        "skin_behind": {
-                            "skinColor": 16777215,
-                            "repeatx": true,
-                            "repeaty": true,
-                            "width": 128,
-                            "height": 128
-                        }
                     },
-                    "startDot": {
-                        "x": -1337,
-                        "y": 120,
-                        "z": 380 - 10 - 240
+                    startDot: {
+                        x: -900,
+                        y: 120,
+                        z: -450
                     },
-                    "endDot": {
-                        "x": -677,
-                        "y": 120,
-                        "z": 380 - 10 -240
-                    },
-                    "children": [
-                        {
-                            "op": "-",
-                            "show": true,
-                            "uuid": "",
-                            "name": "doorhole",
-                            "objType": "doorhole",
-                            "depth": 40,
-                            "height": 210,
-                            "startDot": {
-                                "x": -1157,
-                                "y": 90,
-                                "z": 130
-                            },
-                            "endDot": {
-                                "x": -1257,
-                                "y": 90,
-                                "z": 130
-                            }
-                        }
-                    ]
-                },
-                // 上
-                {
-                    "uuid": "",
-                    "name": "wall1",
-                    "skin": {
-                        "skin_behind": {
-                            "skinColor": 16777215,
-                            "repeatx": true,
-                            "repeaty": true,
-                            "width": 128,
-                            "height": 128
-                        }
-                    },
-                    "startDot": {
-                        "x": -1337,
-                        "y": 120,
-                        "z": 380 - 10 - 240 - 240 - 420
-                    },
-                    "endDot": {
-                        "x": -677,
-                        "y": 120,
-                        "z": 380 - 10 -240 - 240 - 420
+                    endDot: {
+                        x: 900,
+                        y: 120,
+                        z: -450
                     }
                 },
-                // 右
-                {
-                    "uuid": "",
-                    "name": "wall3",
-                    "skin": {
-                        "skin_right": {
-                            "skinColor": 16777215,
-                            "repeatx": true,
-                            "repeaty": true,
-                            "width": 128,
-                            "height": 128
-                        }
+                {//左面墙
+                    uuid: "",
+                    name: 'wall3',
+                    skin: {
+                        skin_right: {
+                            skinColor: 0xb0cee0,
+                            imgUrl: "wall.png",
+                            repeatx: true,
+                            repeaty: true,
+                            width: 128,
+                            height: 128
+                        },
                     },
-                    "startDot": {
-                        "x": -667,
-                        "y": 120,
-                        "z": 1020
+                    startDot: {
+                        x: -910,
+                        y: 120,
+                        z: -460
                     },
-                    "endDot": {
-                        "x": -667,
-                        "y": 120,
-                        "z": -1030
+                    endDot: {
+                        x: -910,
+                        y: 120,
+                        z: 460
                     },
-                    "children": [
-                        {
-                            "op": "-",
-                            "show": true,
-                            "uuid": "",
-                            "name": "doorhole",
-                            "objType": "doorhole",
-                            "depth": 40,
-                            "height": 210,
-                            "startDot": {
-                                "x": -667,
-                                "y": 90,
-                                "z": 160
-                            },
-                            "endDot": {
-                                "x": -667,
-                                "y": 90,
-                                "z": 340
-                            }
-                        }
-                    ]
                 },
+                {//右面墙
+                    uuid: "",
+                    name: 'wall4',
+                    skin: {
+                        skin_left: {
+                            skinColor: 0xb0cee0,
+                            imgUrl: "wall.png",
+                            repeatx: true,
+                            repeaty: true,
+                            width: 128,
+                            height: 128
+                        }
+                    },
+                    startDot: {
+                        x: 910,
+                        y: 120,
+                        z: -460
+                    },
+                    endDot: {
+                        x: 910,
+                        y: 120,
+                        z: 460
+                    }
+                },
+                {//左面墙
+                    uuid: "",
+                    name: 'wall3',
+                    skin: {
+                        skin_right: {
+                            skinColor: 0xb0cee0,
+                            imgUrl: "wall.png",
+                            repeatx: true,
+                            repeaty: true,
+                            width: 128,
+                            height: 128
+                        },
+                    },
+                    startDot: {
+                        x: -550,
+                        y: 120,
+                        z: -450
+                    },
+                    endDot: {
+                        x: -550,
+                        y: 120,
+                        z: 450
+                    },
+                },
+                {//左面墙
+                    uuid: "",
+                    name: 'wall3',
+                    skin: {
+                        skin_right: {
+                            skinColor: 0xb0cee0,
+                            imgUrl: "wall.png",
+                            repeatx: true,
+                            repeaty: true,
+                            width: 128,
+                            height: 128
+                        },
+                    },
+                    startDot: {
+                        x: -100,
+                        y: 120,
+                        z: -450
+                    },
+                    endDot: {
+                        x: -100,
+                        y: 120,
+                        z: -150
+                    },
+                },
+                {//后面墙
+                    uuid: "",
+                    name: 'wall2',
+                    skin: {
+                        skin_fore: {
+                            skinColor: 0xb0cee0,
+                            imgUrl: "wall.png",
+                            repeatx: true,
+                            repeaty: true,
+                            width: 128,
+                            height: 128
+                        },
 
-                // 机房
-                // 上
-                {
-                    "uuid": "",
-                    "name": "wall1",
-                    "skin": {
-                        "skin_behind": {
-                            "skinColor": 16777215,
-                            "repeatx": true,
-                            "repeaty": true,
-                            "width": 128,
-                            "height": 128
-                        }
                     },
-                    "startDot": {
-                        "x": -677,
-                        "y": 120,
-                        "z": -1020 - 10 - 10
+                    startDot: {
+                        x: -550,
+                        y: 120,
+                        z: -150
                     },
-                    "endDot": {
-                        "x": 973,
-                        "y": 120,
-                        "z": -1020 - 10 - 10
+                    endDot: {
+                        x: -90,
+                        y: 120,
+                        z: -150
                     }
                 },
-                // 下
-                {
-                    "uuid": "",
-                    "name": "wall1",
-                    "skin": {
-                        "skin_behind": {
-                            "skinColor": 16777215,
-                            "repeatx": true,
-                            "repeaty": true,
-                            "width": 128,
-                            "height": 128
-                        }
-                    },
-                    "startDot": {
-                        "x": -677,
-                        "y": 120,
-                        "z": 780 - 10
-                    },
-                    "endDot": {
-                        "x": 973,
-                        "y": 120,
-                        "z": 780 - 10
-                    }
-                },
-                // 右
-                {
-                    "uuid": "",
-                    "name": "wall3",
-                    "skin": {
-                        "skin_right": {
-                            "skinColor": 16777215,
-                            "repeatx": true,
-                            "repeaty": true,
-                            "width": 128,
-                            "height": 128
-                        }
-                    },
-                    "startDot": {
-                        "x": 963,
-                        "y": 120,
-                        "z": 780
-                    },
-                    "endDot": {
-                        "x": 963,
-                        "y": 120,
-                        "z": -1030
-                    },
-                    "children": [
-                        {
-                            "op": "-",
-                            "show": true,
-                            "uuid": "",
-                            "name": "doorhole",
-                            "objType": "doorhole",
-                            "depth": 40,
-                            "height": 210,
-                            "startDot": {
-                                "x": 963,
-                                "y": 90,
-                                "z": -90
-                            },
-                            "endDot": {
-                                "x": 963,
-                                "y": 90,
-                                "z": 90
-                            }
-                        }
-                    ]
-                },
-
-            ]
+            ],
         },
-
-
 
     ]
 }
 
-
-let a = [
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": 370,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F1",
-            "alarmInfo": [],
-            "tipInfo": "服务器",
-            "cabinetId": 6
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": 310,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F2",
-            "alarmInfo": [],
-            "tipInfo": "服务器",
-            "cabinetId": 7
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": 250,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F3",
-            "alarmInfo": [],
-            "tipInfo": "服务器",
-            "cabinetId": 8
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": 190,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F4",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": 130,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F5",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": 70,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F6",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": 10,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F7",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": -50,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F8",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": -110,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F9",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": -170,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F10",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": -230,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F11",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": -290,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F12",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": -350,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F13",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": -410,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F14",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": -470,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F15",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": -530,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F16",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": -590,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F17",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": -650,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F18",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": -710,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F19",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-    {
-        "show": true,
-        "name": "cabinet",
-        "uuid": "",
-        "objType": "emptyCabinet",
-        "transparent": true,
-        "size": {
-            "width": 60,
-            "depth": 60,
-            "height": 200,
-            "thick": 2
-        },
-        "x": -770,
-        "y": 100,
-        "z": -640,
-        "rotation": [
-            {
-                "direction": "y",
-                "degree": 3.141592653589793
-            }
-        ],
-        "style": {
-            "skin": {
-                "skin_up": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_down": {
-                    "imgUrl": "rack_top.jpg"
-                },
-                "skin_fore": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_behind": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_left": {
-                    "imgUrl": "rack_back.jpg"
-                },
-                "skin_right": {
-                    "imgUrl": "rack_back.jpg"
-                }
-            }
-        },
-        "doors": {
-            "doorType": "lr",
-            "doorname": [
-                "cabinet_door"
-            ],
-            "skins": [
-                {
-                    "skin_fore": {
-                        "imgUrl": "rack_right_door.jpg"
-                    },
-                    "skin_behind": {
-                        "imgUrl": "rack_left_door.jpg"
-                    }
-                }
-            ],
-            "tipInfo": "服务器"
-        },
-        "data": {
-            "name": "F20",
-            "alarmInfo": [],
-            "tipInfo": "服务器"
-        }
-    },
-]
-let x = -452
-a.forEach(ele => {
-    ele.x = x
-    el.rotation = [
-        {
-            "direction": "y",
-            "degree": Math.PI
-        }
-    ]
-    x += 60
-    ThreeData.objects.push(ele)
-})
