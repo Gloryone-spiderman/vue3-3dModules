@@ -86,7 +86,7 @@ export const ThreeData={
                         "y": 120,
                         "z": -500
                     },
-                    "childrens": [
+                    "children": [
                         {
                             "show": true,
                             "uuid": "",
@@ -160,7 +160,7 @@ export const ThreeData={
                         "y": 120,
                         "z": 560
                     },
-                    "childrens": [
+                    "children": [
                         {
                             "op": "-",
                             "show": true,
@@ -244,7 +244,7 @@ export const ThreeData={
                         "y": 120,
                         "z": 550
                     },
-                    "childrens": [
+                    "children": [
                         {
                             "show": true,
                             "uuid": "",
@@ -352,7 +352,7 @@ export const ThreeData={
                         "y": 120,
                         "z": -110
                     },
-                    "childrens": [
+                    "children": [
                         {
                             "op": "-",
                             "show": true,
@@ -486,7 +486,7 @@ export const ThreeData={
                         "y": 120,
                         "z": 160
                     },
-                    "childrens": [
+                    "children": [
                         {
                             "op": "-",
                             "show": true,
@@ -620,7 +620,7 @@ export const ThreeData={
                     ]
                 }
             ],
-            "childrens": [
+            "children": [
                 {
                     "name": "annihilator-one",
                     "uuid": "",
