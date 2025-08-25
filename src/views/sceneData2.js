@@ -240,7 +240,484 @@ export const ThreeData={
 
             ],
         },
+        //墙体
+        {
+            show: true,
+            uuid: "",
+            name: 'wall',
+            objType: 'wall',
+            depth: 400,
+            width: 100, //根据实际的宽度来的
+            height: 220,
+            style:{
+                skinColor: 0xb0cee0,
+            },
+            wallData: [
+                {//前面墙
+                    uuid: "",
+                    name: 'wall1',
+                    skin: {
+                        skin_behind: {
+                            skinColor: 0xb0cee0,
+                            imgUrl: "glass.png",
+                            repeatx: true,
+                            repeaty: true,
+                            transparent: true,    // 必须开启透明
+                            opacity: 0.7,
+                            width: 128,
+                            height: 128
+                        },
+                        skin_fore: {
+                            skinColor: 0xb0cee0,
+                            imgUrl: "glass.png",
+                            repeatx: true,
+                            repeaty: true,
+                            transparent: true,    // 必须开启透明
+                            opacity: 0.7,
+                            width: 128,
+                            height: 128
+                        },
+                        skin_down: {
+                            skinColor: 0xb0cee0,
+                            imgUrl: "glass.png",
+                            repeatx: true,
+                            repeaty: true,
+                            transparent: true,    // 必须开启透明
+                            opacity: 0.7,
+                            width: 128,
+                            height: 128
+                        },
+                        skin_up: {
+                            skinColor: 0xb0cee0,
+                            imgUrl: "glass.png",
+                            repeatx: true,
+                            repeaty: true,
+                            transparent: true,    // 必须开启透明
+                            opacity: 0.7,
+                            width: 128,
+                            height: 128
+                        }
+                    },
+                    startDot: {
+                        x: 30,
+                        y: 110,
+                        z: 75
+                    },
+                    endDot: {
+                        x: 150,
+                        y: 110,
+                        z: 75
+                    }
+                }
+            ],
+        },
 
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 70,
+                "depth": 60,
+                "height": 200,
+                "thick": 2
+            },
+            "x": -650,
+            "y": 100,
+            "z": 350,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "UPS_black.png"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "UPS_black.png"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 70,
+                "depth": 60,
+                "height": 200,
+                "thick": 1
+            },
+            "x": -260,
+            "y": 100,
+            "z": 350,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "UPS_black.png"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "UPS_black.png"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 70,
+                "depth": 60,
+                "height": 200,
+                "thick": 1
+            },
+            "x": 350,
+            "y": 100,
+            "z": 130,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "UPS_black.png"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "UPS_black.png"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 70,
+                "depth": 60,
+                "height": 200,
+                "thick": 1
+            },
+            "x": -670,
+            "y": 100,
+            "z": -650,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "UPS_black.png"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "UPS_black.png"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 70,
+                "depth": 60,
+                "height": 200,
+                "thick": 1
+            },
+            "x": -370,
+            "y": 100,
+            "z": -650,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "UPS_black.png"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "UPS_black.png"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 70,
+                "depth": 60,
+                "height": 200,
+                "thick": 1
+            },
+            "x": 250,
+            "y": 100,
+            "z": -650,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "UPS_black.png"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "UPS_black.png"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 70,
+                "depth": 60,
+                "height": 200,
+                "thick": 1
+            },
+            "x": 850,
+            "y": 100,
+            "z": -650,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "UPS_black.png"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "UPS_black.png"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
 
         // 机柜
         {
@@ -549,6 +1026,64 @@ export const ThreeData={
             "x": -770,
             "y": 100,
             "z": -600 + 600 + 100,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 200,
+                "thick": 2
+            },
+            "x": -770,
+            "y": 100,
+            "z": -600 + 600 + 150,
             "rotation": [
             ],
             "style": {
@@ -2527,6 +3062,2275 @@ export const ThreeData={
             "x": -770 + 270 + 300 + 300 + 300 + 300,
             "y": 100,
             "z": -600 + 150 + 50,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600 + 50,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600 + 100,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600 + 50,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600 + 100,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 150 + 600,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 150 + 600 + 50,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+
+
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 600 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 600 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600 + 50,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 600 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600 + 100,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 600 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 600 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600 + 50,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 600 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600 + 100,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 600 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 150 + 600,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 100 + 600 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 150 + 600 + 50,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+
+
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 200 + 1000 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 200 + 1000 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600 + 50,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 200 + 1000 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600 + 100,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 200 + 1000 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 200 + 1000 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600 + 50,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 200 + 1000 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600 + 100,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 200 + 1000 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 150 + 600,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 200 + 1000 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 150 + 600 + 50,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 + 200 + 1000 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 150 + 600 + 100,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 -  150 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 -  150 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600 + 50,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 -  150 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600 + 100,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 -  150 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 -  150 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600 + 50,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 -  150 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600 + 100,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 -  150 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 150 + 600,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 +  600 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 +  600 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600 + 50,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 +  600 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 600 + 100,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 +  600 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 +  600 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600 + 50,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 +  600 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 600 + 100,
+            "rotation": [
+            ],
+            "style": {
+                "skin": {
+                    "skin_up": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_down": {
+                        "imgUrl": "rack_top.jpg"
+                    },
+                    "skin_fore": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_behind": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_left": {
+                        "imgUrl": "rack_back.jpg"
+                    },
+                    "skin_right": {
+                        "imgUrl": "rack_back.jpg"
+                    }
+                }
+            },
+            "doors": {
+                "doorType": "lr",
+                "doorname": [
+                    "cabinet_door"
+                ],
+                "skins": [
+                    {
+                        "skin_fore": {
+                            "imgUrl": "rack_right_door.jpg"
+                        },
+                        "skin_behind": {
+                            "imgUrl": "rack_left_door.jpg"
+                        }
+                    }
+                ]
+            },
+            "data": {
+            }
+        },
+        {
+            "show": true,
+            "name": "cabinet",
+            "uuid": "",
+            "objType": "emptyCabinet",
+            "transparent": true,
+            "size": {
+                "width": 100,
+                "depth": 50,
+                "height": 250,
+                "thick": 2
+            },
+            "x": -770 +  600 + 380 + 270,
+            "y": 100,
+            "z": -600 - 100 + 150 + 150 + 600,
             "rotation": [
             ],
             "style": {
