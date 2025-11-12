@@ -45,8 +45,9 @@
 
 <script>
 import ThreeMap from './ThreeMap.js';
-// import {ThreeData} from './ThreeData.js'
-import {ThreeData} from './sceneData2.js'
+//import {ThreeData} from './ThreeData.js'
+//import {ThreeData} from './sceneData2.js'
+import {ThreeData} from './testData.js'
 
 export default {
     name: 'index',

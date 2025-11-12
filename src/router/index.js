@@ -30,9 +30,7 @@ const routerPush = Router.prototype.push
 Router.prototype.push = function push(location) {
   return routerPush.call(this, location).catch(error=> error)
 }
-export const asyncRouter=[
-
-]
+export const asyncRouter=[]
 export const router= new Router({
   //mode: 'history',
   mode:'hash',
