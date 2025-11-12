@@ -10,3 +10,10 @@
 /_MACOSX/
 /node_modules/
 /.idea/
+
+.env
+*.pem
+*.key
+id_rsa
+id_ed25519
+config/private/*
