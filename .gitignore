@@ -76,3 +76,24 @@ out
 # Rollup
 .rollup.cache
 
+# Security - Private keys and secrets (重要：防止泄露私钥)
+*.pem
+*.key
+*.rsa
+*.ed25519
+id_rsa
+id_ed25519
+id_rsa.pub
+id_ed25519.pub
+*.ppk
+*.p12
+*.pfx
+*.jks
+*.keystore
+.env
+.env.*
+!.env.example
+secrets/
+.ssh/
+config/private/
+
