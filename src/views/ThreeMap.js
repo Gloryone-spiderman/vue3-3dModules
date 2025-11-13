@@ -65,6 +65,8 @@ export default class ThreeMap {
     this.progressSuccess = 0;
     this.loadtimer = null;
     this.BASE_PATH = "./images/";
+    this.axesHelper = null; // 坐标系辅助对象
+    this.axesGroup = null; // 坐标系组（包含箭头和标签）
   }
   init() {
     this.initRenderer();
@@ -321,6 +323,7 @@ export default class ThreeMap {
       }
     }
   }
+
   //创建墙
   CreateWall(obj) {
     let _this = this;
@@ -2460,5 +2463,114 @@ export default class ThreeMap {
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+  }
+  // 创建文字标签Sprite
+  createAxisLabel(text, color) {
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+    canvas.width = 128;
+    canvas.height = 128;
+
+    // 设置文字样式
+    context.font = "Bold 60px Arial";
+    context.fillStyle = color;
+    context.strokeStyle = "#000000";
+    context.lineWidth = 4;
+    context.textAlign = "center";
+    context.textBaseline = "middle";
+
+    // 绘制文字（带描边效果，更清晰）
+    context.strokeText(text, 64, 64);
+    context.fillText(text, 64, 64);
+
+    // 创建纹理
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.needsUpdate = true;
+
+    // 创建Sprite
+    const spriteMaterial = new THREE.SpriteMaterial({
+      map: texture,
+      transparent: true,
+    });
+    const sprite = new THREE.Sprite(spriteMaterial);
+    sprite.scale.set(200, 200, 1); // 调整标签大小
+
+    return sprite;
+  }
+
+  // 切换坐标系显示/隐藏（带箭头和标签）
+  toggleAxesHelper(show) {
+    if (show) {
+      // 显示坐标系
+      if (!this.axesGroup) {
+        // 创建坐标系组
+        this.axesGroup = new THREE.Group();
+        
+        // 坐标轴长度（可以根据场景大小调整）
+        const axisLength = 100000;
+        const arrowLength = axisLength * 0.1; // 箭头长度
+        const arrowHeadLength = axisLength * 0.05; // 箭头头部长度
+        const arrowHeadWidth = axisLength * 0.03; // 箭头头部宽度
+
+        // 创建X轴（红色箭头）
+        const xArrow = new THREE.ArrowHelper(
+          new THREE.Vector3(1, 0, 0), // 方向：X轴正方向
+          new THREE.Vector3(0, 0, 0), // 起点：原点
+          axisLength, // 长度
+          0xff0000, // 颜色：红色
+          arrowHeadLength,
+          arrowHeadWidth
+        );
+        this.axesGroup.add(xArrow);
+
+        // 创建Y轴（绿色箭头）
+        const yArrow = new THREE.ArrowHelper(
+          new THREE.Vector3(0, 1, 0), // 方向：Y轴正方向
+          new THREE.Vector3(0, 0, 0), // 起点：原点
+          axisLength, // 长度
+          0x00ff00, // 颜色：绿色
+          arrowHeadLength,
+          arrowHeadWidth
+        );
+        this.axesGroup.add(yArrow);
+
+        // 创建Z轴（蓝色箭头）
+        const zArrow = new THREE.ArrowHelper(
+          new THREE.Vector3(0, 0, 1), // 方向：Z轴正方向
+          new THREE.Vector3(0, 0, 0), // 起点：原点
+          axisLength, // 长度
+          0x0000ff, // 颜色：蓝色
+          arrowHeadLength,
+          arrowHeadWidth
+        );
+        this.axesGroup.add(zArrow);
+
+        // 创建X轴标签
+        const xLabel = this.createAxisLabel("X", "#ff0000");
+        xLabel.position.set(axisLength * 1.1, 0, 0); // 标签位置在箭头末端
+        this.axesGroup.add(xLabel);
+
+        // 创建Y轴标签
+        const yLabel = this.createAxisLabel("Y", "#00ff00");
+        yLabel.position.set(0, axisLength * 1.1, 0);
+        this.axesGroup.add(yLabel);
+
+        // 创建Z轴标签
+        const zLabel = this.createAxisLabel("Z", "#0000ff");
+        zLabel.position.set(0, 0, axisLength * 1.1);
+        this.axesGroup.add(zLabel);
+
+        // 添加到场景
+        this.scene.add(this.axesGroup);
+      } else {
+        // 如果已存在，直接显示
+        this.axesGroup.visible = true;
+      }
+    } else {
+      // 隐藏坐标系
+      if (this.axesGroup) {
+        this.axesGroup.visible = false;
+      }
+    }
   }
 }

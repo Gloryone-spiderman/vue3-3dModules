@@ -1,5 +1,24 @@
 export const ThreeData = {
   objects: [
+    //测试添加新的台灯模型
+    {
+      "show": true,
+      "uuid": "",
+      "name": "lamp",
+      "objType": "objLamp",  // 必须与 switch 中的值一致
+      "children": [
+        {
+          "x": 0,
+          "y": 150,
+          "z": 0
+        },
+        {
+          "x": 1000,
+          "y": 500,
+          "z": 0
+        }
+      ]
+    },
     //接入间机柜配置
     //z轴
     {
