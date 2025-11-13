@@ -1,7 +1,7 @@
 <template>
     <div class="three-content" id="three-dom">
         <el-button type="primary" @click="set" style="position:absolute;top:20px;right:20px;">模拟告警设置</el-button>
-        //添加坐标系
+        <!-- 添加坐标系 -->    
         <el-button 
             :type="showAxes ? 'success' : 'default'" 
             @click="toggleAxes" 
@@ -82,7 +82,7 @@ export default {
         return{
             map:null,
             dialogVisible:false,
-            showAxes:false,  // 是否显示坐标系
+            showAxes:false,  // 添加坐标系，是否显示坐标系
             baseInfo:[
                 {devid:"01",pointid:"0101",name:"",level:"1",id:"",alarmInfo:"",isalarm:false},
                 {devid:"01",pointid:"0102",name:"",level:"1",id:"",alarmInfo:"",isalarm:false},
@@ -126,6 +126,7 @@ export default {
             this.map.updateAlarmStatus(back);
             this.dialogVisible = false
         },
+        // 添加坐标系
         toggleAxes:function(){
             this.showAxes = !this.showAxes;
             if(this.map){

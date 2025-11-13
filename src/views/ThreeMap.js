@@ -65,7 +65,7 @@ export default class ThreeMap {
     this.progressSuccess = 0;
     this.loadtimer = null;
     this.BASE_PATH = "./images/";
-    this.axesHelper = null; // 坐标系辅助对象
+    this.axesHelper = null;  // 添加坐标系，坐标系辅助对象
     this.axesGroup = null; // 坐标系组（包含箭头和标签）
   }
   init() {
@@ -144,6 +144,8 @@ export default class ThreeMap {
   }
   animate() {
     requestAnimationFrame(this.render.bind(this));
+    // 更新房间标签
+    this.updateRoomLabels();
     this.renderer.render(this.scene, this.camera);
   }
   setHelper() {
@@ -168,6 +170,12 @@ export default class ThreeMap {
     // }
     this.createText(this.objList[0].width, this.objList[0].depth);
     this.InitTooltip();
+    
+    // 加载房间名称标签
+    if (this.dataJson && this.dataJson.rooms) {
+      this.loadRoomLabels(this.dataJson.rooms);
+    }
+    
     // this.LoadSuccess();
   }
   //刷新视图
@@ -2498,7 +2506,167 @@ export default class ThreeMap {
     return sprite;
   }
 
+  // 创建房间名称标签
+  createRoomLabel(roomName, position, color = 0xffffff, size = 100) {
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    
+    // 设置画布大小，根据文字长度动态调整
+    const padding = 20;
+    const fontSize = 40;
+    context.font = `Bold ${fontSize}px Arial`;
+    const textWidth = context.measureText(roomName).width;
+    
+    canvas.width = textWidth + padding * 2;
+    canvas.height = fontSize + padding * 2;
+    context.font = `Bold ${fontSize}px Arial`;
+    
+    // 绘制半透明背景
+    context.fillStyle = 'rgba(0, 0, 0, 0.7)';
+    context.beginPath();
+    context.roundRect(0, 0, canvas.width, canvas.height, 10);
+    context.fill();
+    
+    // 设置文字样式
+    context.fillStyle = `#${color.toString(16).padStart(6, '0')}`;
+    context.strokeStyle = '#000000';
+    context.lineWidth = 2;
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+    
+    // 绘制文字（带描边效果，更清晰）
+    context.strokeText(roomName, canvas.width / 2, canvas.height / 2);
+    context.fillText(roomName, canvas.width / 2, canvas.height / 2);
+    
+    // 创建纹理
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.needsUpdate = true;
+    
+    // 创建Sprite
+    const spriteMaterial = new THREE.SpriteMaterial({
+      map: texture,
+      transparent: true
+    });
+    const sprite = new THREE.Sprite(spriteMaterial);
+    
+    // 设置大小和位置
+    const scaleFactor = size / fontSize;
+    sprite.scale.set(canvas.width * scaleFactor, canvas.height * scaleFactor, 1);
+    sprite.position.set(position.x, position.y, position.z);
+    
+    // 标记为房间标签
+    sprite.userData = { type: 'roomLabel' };
+    
+    return sprite;
+  }
+  
+  // 更新房间标签朝向相机
+  updateRoomLabels() {
+    this.scene.traverse(object => {
+      if (object instanceof THREE.Sprite && object.userData.type === 'roomLabel') {
+        // 对于Sprite，使用不同的方法让它朝向相机（Sprite始终面向相机）
+        // 我们这里不需要额外的旋转，因为Sprite默认就是面向相机的
+        // 但可以根据需要调整
+      }
+    });
+  }
+  
+  // 加载房间名称标签
+  loadRoomLabels(rooms) {
+    if (!rooms || !Array.isArray(rooms)) return;
+    
+    // 存储所有房间标签
+    this.roomLabels = [];
+    
+    rooms.forEach(room => {
+      const label = this.createRoomLabel(
+        room.name,
+        room.position,
+        room.color || 0xffffff,
+        room.size || 100
+      );
+      this.scene.add(label);
+      this.roomLabels.push(label);
+    });
+  }
+
+  // 创建坐标系图例
+  createAxesLegend() {
+    // 检查图例是否已存在
+    if (document.getElementById('axes-legend')) {
+      return;
+    }
+    
+    // 创建图例容器
+    const legendDiv = document.createElement('div');
+    legendDiv.id = 'axes-legend';
+    legendDiv.style.cssText = `
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    `;
+    
+    // 设置图例标题
+    const title = document.createElement('div');
+    title.textContent = '坐标系图例';
+    title.style.cssText = 'font-weight: bold; margin-bottom: 8px;';
+    legendDiv.appendChild(title);
+    
+    // 定义坐标轴颜色和标签
+    const axes = [
+      { color: '#ff0000', label: 'X轴' },
+      { color: '#00ff00', label: 'Y轴' },
+      { color: '#0000ff', label: 'Z轴' }
+    ];
+    
+    // 创建每个轴的图例项
+    axes.forEach(axis => {
+      const item = document.createElement('div');
+      item.style.cssText = 'display: flex; align-items: center; margin-bottom: 4px;';
+      
+      // 创建颜色条
+      const colorBar = document.createElement('div');
+      colorBar.style.cssText = `
+        width: 30px;
+        height: 4px;
+        background-color: ${axis.color};
+        margin-right: 8px;
+        border-radius: 2px;
+      `;
+      
+      // 创建标签
+      const label = document.createElement('span');
+      label.textContent = axis.label;
+      
+      item.appendChild(colorBar);
+      item.appendChild(label);
+      legendDiv.appendChild(item);
+    });
+    
+    // 添加到DOM
+    const container = document.getElementById(this.props.domID);
+    if (container) {
+      container.appendChild(legendDiv);
+    }
+  }
+
+  // 切换图例显示/隐藏
+  toggleAxesLegend(show) {
+    const legend = document.getElementById('axes-legend');
+    if (legend) {
+      legend.style.display = show ? 'block' : 'none';
+    }
+  }
+
   // 切换坐标系显示/隐藏（带箭头和标签）
+  // 显示坐标系
   toggleAxesHelper(show) {
     if (show) {
       // 显示坐标系
@@ -2507,7 +2675,7 @@ export default class ThreeMap {
         this.axesGroup = new THREE.Group();
         
         // 坐标轴长度（可以根据场景大小调整）
-        const axisLength = 100000;
+        const axisLength = 1000;
         const arrowLength = axisLength * 0.1; // 箭头长度
         const arrowHeadLength = axisLength * 0.05; // 箭头头部长度
         const arrowHeadWidth = axisLength * 0.03; // 箭头头部宽度
@@ -2545,6 +2713,8 @@ export default class ThreeMap {
         );
         this.axesGroup.add(zArrow);
 
+        // 注释掉标签创建代码，只保留坐标轴箭头
+        // 如需重新启用标签，请取消下面的注释
         // 创建X轴标签
         const xLabel = this.createAxisLabel("X", "#ff0000");
         xLabel.position.set(axisLength * 1.1, 0, 0); // 标签位置在箭头末端
@@ -2562,14 +2732,19 @@ export default class ThreeMap {
 
         // 添加到场景
         this.scene.add(this.axesGroup);
+        
+        // 创建并显示图例
+        this.createAxesLegend();
       } else {
         // 如果已存在，直接显示
         this.axesGroup.visible = true;
+        this.toggleAxesLegend(true);
       }
     } else {
       // 隐藏坐标系
       if (this.axesGroup) {
         this.axesGroup.visible = false;
+        this.toggleAxesLegend(false);
       }
     }
   }

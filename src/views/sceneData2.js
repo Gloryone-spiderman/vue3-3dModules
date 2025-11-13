@@ -5,6 +5,27 @@
 */
 
 export const ThreeData = {
+  // 房间配置信息
+  rooms: [
+    {
+      name: "主机房",
+      position: { x: 0, y: 200, z: 0 }, // 位置可以根据实际房间布局调整
+      color: "#ffffff",
+      fontSize: 24
+    },
+    {
+      name: "设备间",
+      position: { x: -400, y: 200, z: 500 },
+      color: "#ffffff",
+      fontSize: 24
+    },
+    {
+      name: "控制室",
+      position: { x: 600, y: 200, z: 0 },
+      color: "#ffffff",
+      fontSize: 24
+    }
+  ],
   objects: [
     //地板
     {
@@ -274,6 +295,8 @@ export const ThreeData = {
             y: 120,
             z: 410,
           },
+          // 可选：指定此墙属于哪个房间
+          roomId: "mainRoom",
         },
         {
           //右面墙
