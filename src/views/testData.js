@@ -19,6 +19,19 @@ export const ThreeData = {
         }
       ]
     },
+    // 增加接入间房间标签
+    {
+      show: true,
+      name: "roomLabel1",
+      objType: "roomLabel",
+      x: -842,
+      y: 300,
+      z: 865,
+      data: {
+        roomName: "接入间",
+        type: "roomMarker"
+      }
+    },
     //接入间机柜配置
     //z轴
     {

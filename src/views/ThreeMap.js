@@ -67,6 +67,7 @@ export default class ThreeMap {
     this.BASE_PATH = "./images/";
     this.axesHelper = null;  // 添加坐标系，坐标系辅助对象
     this.axesGroup = null; // 坐标系组（包含箭头和标签）
+    this.roomLabels = []; // 房间标签数组
   }
   init() {
     this.initRenderer();
@@ -89,7 +90,7 @@ export default class ThreeMap {
       false
     );
   }
-
+  
   //初始化渲染场景
   initRenderer() {
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -171,10 +172,6 @@ export default class ThreeMap {
     this.createText(this.objList[0].width, this.objList[0].depth);
     this.InitTooltip();
     
-    // 加载房间名称标签
-    if (this.dataJson && this.dataJson.rooms) {
-      this.loadRoomLabels(this.dataJson.rooms);
-    }
     
     // this.LoadSuccess();
   }
@@ -327,6 +324,10 @@ export default class ThreeMap {
           break;
         case "objCamera": //模型摄像头
           this.createObjCamera(obj);
+          break;
+        case "roomLabel": //房间标签
+          tempObj = this.createRoomLabel(obj);
+          this.addObject(tempObj, "scene");
           break;
       }
     }
@@ -2507,13 +2508,19 @@ export default class ThreeMap {
   }
 
   // 创建房间名称标签
-  createRoomLabel(roomName, position, color = 0xffffff, size = 100) {
+  createRoomLabel(obj) {
+    // 从obj对象中提取所需信息
+    const roomName = obj.data && obj.data.roomName ? obj.data.roomName : "未命名房间";
+    const position = new THREE.Vector3(obj.x, obj.y, obj.z);
+    const color = obj.data && obj.data.color ? obj.data.color : 0xffffff;
+    const fontSize = obj.data && obj.data.fontSize ? obj.data.fontSize : 40;
+    const size = obj.data && obj.data.size ? obj.data.size : 100;
+    
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
     
     // 设置画布大小，根据文字长度动态调整
     const padding = 20;
-    const fontSize = 40;
     context.font = `Bold ${fontSize}px Arial`;
     const textWidth = context.measureText(roomName).width;
     
@@ -2556,6 +2563,10 @@ export default class ThreeMap {
     
     // 标记为房间标签
     sprite.userData = { type: 'roomLabel' };
+    
+    // 添加到房间标签数组中
+    if (!this.roomLabels) this.roomLabels = [];
+    this.roomLabels.push(sprite);
     
     return sprite;
   }
