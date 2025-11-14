@@ -2514,13 +2514,13 @@ export default class ThreeMap {
     const position = new THREE.Vector3(obj.x, obj.y, obj.z);
     const color = obj.data && obj.data.color ? obj.data.color : 0xffffff;
     const fontSize = obj.data && obj.data.fontSize ? obj.data.fontSize : 40;
-    const size = obj.data && obj.data.size ? obj.data.size : 100;
+    const size = obj.data && obj.data.size ? obj.data.size : 80;
     
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
     
     // 设置画布大小，根据文字长度动态调整
-    const padding = 20;
+    const padding = 10;
     context.font = `Bold ${fontSize}px Arial`;
     const textWidth = context.measureText(roomName).width;
     
@@ -2531,7 +2531,7 @@ export default class ThreeMap {
     // 绘制半透明背景
     context.fillStyle = 'rgba(0, 0, 0, 0.7)';
     context.beginPath();
-    context.roundRect(0, 0, canvas.width, canvas.height, 10);
+    context.roundRect(0, 0, canvas.width, canvas.height, 8);
     context.fill();
     
     // 设置文字样式
@@ -2686,7 +2686,7 @@ export default class ThreeMap {
         this.axesGroup = new THREE.Group();
         
         // 坐标轴长度（可以根据场景大小调整）
-        const axisLength = 1000;
+        const axisLength = 2000;
         const arrowLength = axisLength * 0.1; // 箭头长度
         const arrowHeadLength = axisLength * 0.05; // 箭头头部长度
         const arrowHeadWidth = axisLength * 0.03; // 箭头头部宽度

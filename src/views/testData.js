@@ -19,16 +19,94 @@ export const ThreeData = {
         }
       ]
     },
-    // 增加接入间房间标签
+    // 接入间房间标签
     {
       show: true,
       name: "roomLabel1",
       objType: "roomLabel",
-      x: -842,
-      y: 300,
-      z: 865,
+      x: -850,
+      y: 400,
+      z: 670,
       data: {
         roomName: "接入间",
+        type: "roomMarker"
+      }
+    },
+    // 监控室房间标签
+    {
+      show: true,
+      name: "roomLabel2",
+      objType: "roomLabel",
+      x: -1000,
+      y: 400,
+      z: -180,
+      data: {
+        roomName: "监控室",
+        type: "roomMarker"
+      }
+    },
+    // 缓冲区房间标签
+    {
+      show: true,
+      name: "roomLabel3",
+      objType: "roomLabel",
+      x: -1000,
+      y: 400,
+      z: 250,
+      data: {
+        roomName: "缓冲区",
+        type: "roomMarker"
+      }
+    },
+    // CA认证室标签
+    {
+      show: true,
+      name: "roomLabel4",
+      objType: "roomLabel",
+      x: 1100,
+      y: 400,
+      z: 600,
+      data: {
+        roomName: "CA认证室",
+        type: "roomMarker"
+      }
+    },
+    // 门厅标签
+    {
+      show: true,
+      name: "roomLabel5",
+      objType: "roomLabel",
+      x: 1100,
+      y: 400,
+      z: 0,
+      data: {
+        roomName: "门厅",
+        type: "roomMarker"
+      }
+    },
+    // 机房标签
+    {
+      show: true,
+      name: "roomLabel6",
+      objType: "roomLabel",
+      x: 200,
+      y: 400,
+      z: -120,
+      data: {
+        roomName: "机房",
+        type: "roomMarker"
+      }
+    },
+    // 钢瓶间标签
+    {
+      show: true,
+      name: "roomLabel7",
+      objType: "roomLabel",
+      x: -1150,
+      y: 400,
+      z: 670,
+      data: {
+        roomName: "钢瓶间",
         type: "roomMarker"
       }
     },
@@ -8467,7 +8545,7 @@ export const ThreeData = {
       objType: "sprite",
       x: -543,
       y: 270,
-      z: 91,
+      z: -700,
       data: {
         assetid: 9379616,
         data: [
@@ -8487,7 +8565,7 @@ export const ThreeData = {
       objType: "sprite",
       x: -543,
       y: 270,
-      z: -191,
+      z: -160,
       data: {
         assetid: 9379631,
         data: [
@@ -8513,7 +8591,7 @@ export const ThreeData = {
       objType: "sprite",
       x: -543,
       y: 270,
-      z: 380,
+      z: 450,
       data: {
         assetid: 9379595,
         data: [
@@ -8532,20 +8610,6 @@ export const ThreeData = {
             ],
           },
         ],
-      },
-    },
-    //sprite标题显示
-    {
-      show: true,
-      name: "roomtitle",
-      uuid: "",
-      objType: "sprite",
-      transparent: true,
-      x: 100,
-      y: 100,
-      z: 100,
-      data: {
-        name: "监控室",
       },
     },
     //桌子
